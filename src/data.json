@@ -1,0 +1,1645 @@
+{
+  "total_aud_spent": 7164.01,
+  "total_deposits": 10164,
+  "total_withdrawals": 2999.99,
+  "total_profit": 19103.469999999994,
+  "aud_spent_plus_total_profit": 26267.479999999996,
+  "total_coin_balance_in_aud": 27494.289999999994,
+  "balances": [
+    {
+      "profit": 620.2,
+      "shortName": "LTC",
+      "total_aud_spent": 257.07,
+      "total_buy_order_amount": 257.07,
+      "total_sell_order_amount": 0,
+      "percentage_difference": 241.25724510833626,
+      "balance": 3.22883454,
+      "audbalance": 877.27,
+      "rate": 271.7,
+      "buy_orders": [
+        {
+          "otc": false,
+          "market": "LTC/AUD",
+          "amount": 0.04570204,
+          "created": "2020-10-28T00:39:49.776Z",
+          "audfeeExGst": 0.03502315,
+          "audGst": 0.00350231,
+          "audtotal": 3.89
+        },
+        {
+          "otc": false,
+          "market": "LTC/AUD",
+          "amount": 3.13952028,
+          "created": "2020-10-21T22:37:54.032Z",
+          "audfeeExGst": 2.25022502,
+          "audGst": 0.2250225,
+          "audtotal": 250
+        },
+        {
+          "otc": false,
+          "market": "LTC/AUD",
+          "amount": 0.04361222,
+          "created": "2020-10-13T05:51:35.658Z",
+          "audfeeExGst": 0.02861684,
+          "audGst": 0.00286168,
+          "audtotal": 3.18
+        }
+      ],
+      "sell_orders": []
+    },
+    {
+      "profit": 2838.449999999999,
+      "shortName": "ETH",
+      "total_aud_spent": 5103.440000000001,
+      "total_buy_order_amount": 10309.400000000001,
+      "total_sell_order_amount": 5205.96,
+      "percentage_difference": 55.61836721897383,
+      "balance": 3.27875825,
+      "audbalance": 7941.89,
+      "rate": 2422.22,
+      "buy_orders": [
+        {
+          "otc": false,
+          "market": "ETH/AUD",
+          "amount": 0.17425076,
+          "created": "2021-02-11T01:58:59.608Z",
+          "audfeeExGst": 3.61836184,
+          "audGst": 0.36183618,
+          "audtotal": 402
+        },
+        {
+          "otc": false,
+          "market": "ETH/AUD",
+          "amount": 0.96703259,
+          "created": "2021-02-09T21:22:08.313Z",
+          "audfeeExGst": 20.70207021,
+          "audGst": 2.07020702,
+          "audtotal": 2300
+        },
+        {
+          "otc": false,
+          "market": "ETH/AUD",
+          "amount": 2.05079972,
+          "created": "2021-01-31T23:05:41.759Z",
+          "audfeeExGst": 33.16831683,
+          "audGst": 3.31683168,
+          "audtotal": 3685
+        },
+        {
+          "otc": false,
+          "market": "ETH/AUD",
+          "amount": 2.23456299,
+          "created": "2021-01-11T08:38:19.063Z",
+          "audfeeExGst": 29.85625563,
+          "audGst": 2.98562556,
+          "audtotal": 3317.03
+        },
+        {
+          "otc": false,
+          "market": "ETH/AUD",
+          "amount": 0.03324468,
+          "created": "2021-01-05T22:47:33.365Z",
+          "audfeeExGst": 0.450045,
+          "audGst": 0.0450045,
+          "audtotal": 50
+        },
+        {
+          "otc": false,
+          "market": "ETH/AUD",
+          "amount": 0.01259255,
+          "created": "2020-12-24T05:27:02.502Z",
+          "audfeeExGst": 0.090009,
+          "audGst": 0.0090009,
+          "audtotal": 10
+        },
+        {
+          "otc": false,
+          "market": "ETH/AUD",
+          "amount": 0.0127851,
+          "created": "2020-12-13T01:46:05.022Z",
+          "audfeeExGst": 0.090009,
+          "audGst": 0.0090009,
+          "audtotal": 10
+        },
+        {
+          "otc": false,
+          "market": "ETH/AUD",
+          "amount": 0.12767152,
+          "created": "2020-12-09T11:20:16.981Z",
+          "audfeeExGst": 0.90009001,
+          "audGst": 0.090009,
+          "audtotal": 100
+        },
+        {
+          "otc": false,
+          "market": "ETH/AUD",
+          "amount": 0.1735019,
+          "created": "2020-11-25T03:44:48.661Z",
+          "audfeeExGst": 1.29854694,
+          "audGst": 0.12985469,
+          "audtotal": 144.27
+        },
+        {
+          "otc": false,
+          "market": "ETH/AUD",
+          "amount": 0.02067654,
+          "created": "2020-11-24T01:26:38.973Z",
+          "audfeeExGst": 0.16372248,
+          "audGst": 0.01637225,
+          "audtotal": 18.19
+        },
+        {
+          "otc": false,
+          "market": "ETH/AUD",
+          "amount": 0.01313245,
+          "created": "2020-10-28T00:39:49.776Z",
+          "audfeeExGst": 0.06994954,
+          "audGst": 0.00699495,
+          "audtotal": 7.77
+        },
+        {
+          "otc": false,
+          "market": "ETH/AUD",
+          "amount": 0.43038149,
+          "created": "2020-10-21T22:38:58.700Z",
+          "audfeeExGst": 2.25022502,
+          "audGst": 0.2250225,
+          "audtotal": 250
+        },
+        {
+          "otc": false,
+          "market": "ETH/AUD",
+          "amount": 0.01253237,
+          "created": "2020-10-13T05:51:35.658Z",
+          "audfeeExGst": 0.06289199,
+          "audGst": 0.0062892,
+          "audtotal": 6.99
+        },
+        {
+          "otc": false,
+          "market": "ETH/AUD",
+          "amount": 0.01559359,
+          "created": "2020-09-30T23:28:27.869Z",
+          "audfeeExGst": 0.0733264,
+          "audGst": 0.00733264,
+          "audtotal": 8.15
+        }
+      ],
+      "sell_orders": [
+        {
+          "otc": false,
+          "market": "ETH/AUD",
+          "amount": 3,
+          "total": 5205.96,
+          "created": "2021-01-25T21:57:37.621Z",
+          "audfeeExGst": 47.80495868,
+          "audGst": 4.78049587,
+          "audtotal": 5205.96
+        }
+      ]
+    },
+    {
+      "profit": 96.5,
+      "shortName": "BNB",
+      "total_aud_spent": 14.19,
+      "total_buy_order_amount": 14.19,
+      "total_sell_order_amount": 0,
+      "percentage_difference": 680.0563777307963,
+      "balance": 0.30796792,
+      "audbalance": 110.69,
+      "rate": 359.42,
+      "buy_orders": [
+        {
+          "otc": false,
+          "market": "BNB/AUD",
+          "amount": 0.15757805,
+          "created": "2020-10-28T00:39:49.776Z",
+          "audfeeExGst": 0.06572607,
+          "audGst": 0.00657261,
+          "audtotal": 7.3
+        },
+        {
+          "otc": false,
+          "market": "BNB/AUD",
+          "amount": 0.15038987,
+          "created": "2020-10-13T05:51:35.658Z",
+          "audfeeExGst": 0.06201044,
+          "audGst": 0.00620104,
+          "audtotal": 6.89
+        }
+      ],
+      "sell_orders": []
+    },
+    {
+      "profit": 94.88,
+      "shortName": "MFT",
+      "total_aud_spent": 10,
+      "total_buy_order_amount": 10,
+      "total_sell_order_amount": 0,
+      "percentage_difference": 948.8,
+      "balance": 4125.41254125,
+      "audbalance": 104.88,
+      "rate": 0.025423,
+      "buy_orders": [
+        {
+          "otc": false,
+          "market": "MFT/AUD",
+          "amount": 4125.41254125,
+          "created": "2020-09-30T23:27:24.451Z",
+          "audfeeExGst": 0.090009,
+          "audGst": 0.0090009,
+          "audtotal": 10
+        }
+      ],
+      "sell_orders": []
+    },
+    {
+      "profit": 46.22,
+      "shortName": "DOT",
+      "total_aud_spent": 100,
+      "total_buy_order_amount": 100,
+      "total_sell_order_amount": 0,
+      "percentage_difference": 46.22,
+      "balance": 3.05064063,
+      "audbalance": 146.22,
+      "rate": 47.93,
+      "buy_orders": [
+        {
+          "otc": false,
+          "market": "DOT/AUD",
+          "amount": 3.05064063,
+          "created": "2021-02-11T01:56:39.291Z",
+          "audfeeExGst": 0.90009001,
+          "audGst": 0.090009,
+          "audtotal": 100
+        }
+      ],
+      "sell_orders": []
+    },
+    {
+      "profit": 46.25,
+      "shortName": "BTT",
+      "total_aud_spent": 10,
+      "total_buy_order_amount": 10,
+      "total_sell_order_amount": 0,
+      "percentage_difference": 462.5,
+      "balance": 26283.97565922,
+      "audbalance": 56.25,
+      "rate": 0.00214,
+      "buy_orders": [
+        {
+          "otc": false,
+          "market": "BTT/AUD",
+          "amount": 20283.97565922,
+          "created": "2020-09-30T23:25:50.976Z",
+          "audfeeExGst": 0.090009,
+          "audGst": 0.0090009,
+          "audtotal": 10
+        }
+      ],
+      "sell_orders": []
+    },
+    {
+      "profit": 66.17,
+      "shortName": "ONE",
+      "total_aud_spent": 20,
+      "total_buy_order_amount": 20,
+      "total_sell_order_amount": 0,
+      "percentage_difference": 330.85,
+      "balance": 786.37990012,
+      "audbalance": 86.17,
+      "rate": 0.109583,
+      "buy_orders": [
+        {
+          "otc": false,
+          "market": "ONE/AUD",
+          "amount": 786.37990012,
+          "created": "2021-02-11T01:54:57.915Z",
+          "audfeeExGst": 0.180018,
+          "audGst": 0.0180018,
+          "audtotal": 20
+        }
+      ],
+      "sell_orders": []
+    },
+    {
+      "profit": 104.89,
+      "shortName": "CELR",
+      "total_aud_spent": 9.99,
+      "total_buy_order_amount": 9.99,
+      "total_sell_order_amount": 0,
+      "percentage_difference": 1049.94994994995,
+      "balance": 1684.37025796,
+      "audbalance": 114.88,
+      "rate": 0.068202,
+      "buy_orders": [
+        {
+          "otc": false,
+          "market": "CELR/AUD",
+          "amount": 1684.37025796,
+          "created": "2020-10-28T00:45:42.618Z",
+          "audfeeExGst": 0.08991899,
+          "audGst": 0.0089919,
+          "audtotal": 9.99
+        }
+      ],
+      "sell_orders": []
+    },
+    {
+      "profit": 5.32,
+      "shortName": "XTZ",
+      "total_aud_spent": 7.029999999999999,
+      "total_buy_order_amount": 7.029999999999999,
+      "total_sell_order_amount": 0,
+      "percentage_difference": 75.67567567567569,
+      "balance": 2.15583063,
+      "audbalance": 12.35,
+      "rate": 5.729,
+      "buy_orders": [
+        {
+          "otc": false,
+          "market": "XTZ/AUD",
+          "amount": 1.10310709,
+          "created": "2020-10-28T00:39:49.776Z",
+          "audfeeExGst": 0.03043225,
+          "audGst": 0.00304323,
+          "audtotal": 3.38
+        },
+        {
+          "otc": false,
+          "market": "XTZ/AUD",
+          "amount": 1.05272354,
+          "created": "2020-10-13T05:51:35.658Z",
+          "audfeeExGst": 0.03282678,
+          "audGst": 0.00328268,
+          "audtotal": 3.65
+        }
+      ],
+      "sell_orders": []
+    },
+    {
+      "profit": 200.64,
+      "shortName": "NPXS",
+      "total_aud_spent": 10,
+      "total_buy_order_amount": 10,
+      "total_sell_order_amount": 0,
+      "percentage_difference": 2006.4,
+      "balance": 46728.97196261,
+      "audbalance": 210.64,
+      "rate": 0.004508,
+      "buy_orders": [
+        {
+          "otc": false,
+          "market": "NPXS/AUD",
+          "amount": 46728.97196261,
+          "created": "2020-09-30T23:25:12.417Z",
+          "audfeeExGst": 0.090009,
+          "audGst": 0.0090009,
+          "audtotal": 10
+        }
+      ],
+      "sell_orders": []
+    },
+    {
+      "profit": 93.22000000000003,
+      "shortName": "RVN",
+      "total_aud_spent": 500,
+      "total_buy_order_amount": 500,
+      "total_sell_order_amount": 0,
+      "percentage_difference": 18.644000000000005,
+      "balance": 2015.93394187,
+      "audbalance": 593.22,
+      "rate": 0.294266,
+      "buy_orders": [
+        {
+          "otc": false,
+          "market": "RVN/AUD",
+          "amount": 2015.93394187,
+          "created": "2021-03-11T07:45:39.813Z",
+          "audfeeExGst": 4.50045005,
+          "audGst": 0.450045,
+          "audtotal": 500
+        }
+      ],
+      "sell_orders": []
+    },
+    {
+      "profit": 126.61000000000001,
+      "shortName": "HOT",
+      "total_aud_spent": 10,
+      "total_buy_order_amount": 10,
+      "total_sell_order_amount": 0,
+      "percentage_difference": 1266.1000000000001,
+      "balance": 14245.01424501,
+      "audbalance": 136.61,
+      "rate": 0.00959,
+      "buy_orders": [
+        {
+          "otc": false,
+          "market": "HOT/AUD",
+          "amount": 14245.01424501,
+          "created": "2020-09-30T23:26:10.111Z",
+          "audfeeExGst": 0.090009,
+          "audGst": 0.0090009,
+          "audtotal": 10
+        }
+      ],
+      "sell_orders": []
+    },
+    {
+      "profit": 61.95,
+      "shortName": "KEY",
+      "total_aud_spent": 10,
+      "total_buy_order_amount": 10,
+      "total_sell_order_amount": 0,
+      "percentage_difference": 619.5,
+      "balance": 3370.40781934,
+      "audbalance": 71.95,
+      "rate": 0.021346,
+      "buy_orders": [
+        {
+          "otc": false,
+          "market": "KEY/AUD",
+          "amount": 3370.40781934,
+          "created": "2020-10-13T05:48:39.552Z",
+          "audfeeExGst": 0.090009,
+          "audGst": 0.0090009,
+          "audtotal": 10
+        }
+      ],
+      "sell_orders": []
+    },
+    {
+      "profit": 35.8,
+      "shortName": "NCASH",
+      "total_aud_spent": 10,
+      "total_buy_order_amount": 10,
+      "total_sell_order_amount": 0,
+      "percentage_difference": 357.99999999999994,
+      "balance": 11737.08920187,
+      "audbalance": 45.8,
+      "rate": 0.003902,
+      "buy_orders": [
+        {
+          "otc": false,
+          "market": "NCASH/AUD",
+          "amount": 11737.08920187,
+          "created": "2020-09-30T23:26:19.123Z",
+          "audfeeExGst": 0.090009,
+          "audGst": 0.0090009,
+          "audtotal": 10
+        }
+      ],
+      "sell_orders": []
+    },
+    {
+      "profit": 36.67,
+      "shortName": "TFUEL",
+      "total_aud_spent": 0,
+      "total_buy_order_amount": 0,
+      "total_sell_order_amount": 0,
+      "percentage_difference": null,
+      "balance": 85,
+      "audbalance": 36.67,
+      "rate": 0.431436,
+      "buy_orders": [],
+      "sell_orders": []
+    },
+    {
+      "profit": -2.289999999999999,
+      "shortName": "SNT",
+      "total_aud_spent": 20,
+      "total_buy_order_amount": 20,
+      "total_sell_order_amount": 0,
+      "percentage_difference": -11.449999999999996,
+      "balance": 131.27321895,
+      "audbalance": 17.71,
+      "rate": 0.134872,
+      "buy_orders": [
+        {
+          "otc": false,
+          "market": "SNT/AUD",
+          "amount": 131.27321895,
+          "created": "2021-02-11T01:53:58.098Z",
+          "audfeeExGst": 0.180018,
+          "audGst": 0.0180018,
+          "audtotal": 20
+        }
+      ],
+      "sell_orders": []
+    },
+    {
+      "profit": 132.26,
+      "shortName": "STMX",
+      "total_aud_spent": 10,
+      "total_buy_order_amount": 10,
+      "total_sell_order_amount": 0,
+      "percentage_difference": 1322.6,
+      "balance": 3043.21363359,
+      "audbalance": 142.26,
+      "rate": 0.046745,
+      "buy_orders": [
+        {
+          "otc": false,
+          "market": "STMX/AUD",
+          "amount": 3043.21363359,
+          "created": "2020-10-13T05:49:01.676Z",
+          "audfeeExGst": 0.090009,
+          "audGst": 0.0090009,
+          "audtotal": 10
+        }
+      ],
+      "sell_orders": []
+    },
+    {
+      "profit": 33.97999999999999,
+      "shortName": "XRB",
+      "total_aud_spent": 110,
+      "total_buy_order_amount": 110,
+      "total_sell_order_amount": 0,
+      "percentage_difference": 30.89090909090908,
+      "balance": 20.88713352,
+      "audbalance": 143.98,
+      "rate": 6.893,
+      "buy_orders": [
+        {
+          "otc": false,
+          "market": "XRB/AUD",
+          "amount": 20.88713352,
+          "created": "2021-01-29T11:44:46.481Z",
+          "audfeeExGst": 0.99009901,
+          "audGst": 0.0990099,
+          "audtotal": 110
+        }
+      ],
+      "sell_orders": []
+    },
+    {
+      "profit": 3068.78,
+      "shortName": "ADA",
+      "total_aud_spent": 322,
+      "total_buy_order_amount": 322,
+      "total_sell_order_amount": 0,
+      "percentage_difference": 953.0372670807454,
+      "balance": 1839.8223957,
+      "audbalance": 3390.78,
+      "rate": 1.842992,
+      "buy_orders": [
+        {
+          "otc": false,
+          "market": "ADA/AUD",
+          "amount": 140.81175158,
+          "created": "2021-01-05T22:46:40.638Z",
+          "audfeeExGst": 0.450045,
+          "audGst": 0.0450045,
+          "audtotal": 50
+        },
+        {
+          "otc": false,
+          "market": "ADA/AUD",
+          "amount": 46.61309268,
+          "created": "2020-12-14T20:13:03.696Z",
+          "audfeeExGst": 0.090009,
+          "audGst": 0.0090009,
+          "audtotal": 10
+        },
+        {
+          "otc": false,
+          "market": "ADA/AUD",
+          "amount": 60.2436857,
+          "created": "2020-12-13T01:10:44.681Z",
+          "audfeeExGst": 0.1080108,
+          "audGst": 0.01080108,
+          "audtotal": 12
+        },
+        {
+          "otc": false,
+          "market": "ADA/AUD",
+          "amount": 1592.15386574,
+          "created": "2020-10-21T22:46:42.433Z",
+          "audfeeExGst": 2.25022502,
+          "audGst": 0.2250225,
+          "audtotal": 250
+        }
+      ],
+      "sell_orders": []
+    },
+    {
+      "profit": 268.16999999999996,
+      "shortName": "XLM",
+      "total_aud_spent": 165.97,
+      "total_buy_order_amount": 165.97,
+      "total_sell_order_amount": 0,
+      "percentage_difference": 161.57739350485025,
+      "balance": 813.97920763,
+      "audbalance": 434.14,
+      "rate": 0.533357,
+      "buy_orders": [
+        {
+          "otc": false,
+          "market": "XLM/AUD",
+          "amount": 43.55856012,
+          "created": "2020-12-21T22:39:28.518Z",
+          "audfeeExGst": 0.090009,
+          "audGst": 0.0090009,
+          "audtotal": 10
+        },
+        {
+          "otc": false,
+          "market": "XLM/AUD",
+          "amount": 39.7740832,
+          "created": "2020-12-19T20:15:46.873Z",
+          "audfeeExGst": 0.090009,
+          "audGst": 0.0090009,
+          "audtotal": 10
+        },
+        {
+          "otc": false,
+          "market": "XLM/AUD",
+          "amount": 40.66594552,
+          "created": "2020-12-18T20:36:18.858Z",
+          "audfeeExGst": 0.090009,
+          "audGst": 0.0090009,
+          "audtotal": 10
+        },
+        {
+          "otc": false,
+          "market": "XLM/AUD",
+          "amount": 38.99000296,
+          "created": "2020-12-17T21:38:38.909Z",
+          "audfeeExGst": 0.090009,
+          "audGst": 0.0090009,
+          "audtotal": 10
+        },
+        {
+          "otc": false,
+          "market": "XLM/AUD",
+          "amount": 40.64098967,
+          "created": "2020-12-16T20:57:26.853Z",
+          "audfeeExGst": 0.090009,
+          "audGst": 0.0090009,
+          "audtotal": 10
+        },
+        {
+          "otc": false,
+          "market": "XLM/AUD",
+          "amount": 43.01019771,
+          "created": "2020-12-15T21:14:27.190Z",
+          "audfeeExGst": 0.090009,
+          "audGst": 0.0090009,
+          "audtotal": 10
+        },
+        {
+          "otc": false,
+          "market": "XLM/AUD",
+          "amount": 477.43635773,
+          "created": "2020-12-09T11:17:45.787Z",
+          "audfeeExGst": 0.90009001,
+          "audGst": 0.090009,
+          "audtotal": 100
+        },
+        {
+          "otc": false,
+          "market": "XLM/AUD",
+          "amount": 49.90307072,
+          "created": "2020-10-28T00:39:49.776Z",
+          "audfeeExGst": 0.05370442,
+          "audGst": 0.00537044,
+          "audtotal": 5.97
+        }
+      ],
+      "sell_orders": []
+    },
+    {
+      "profit": 10.740000000000002,
+      "shortName": "SCRT",
+      "total_aud_spent": 40,
+      "total_buy_order_amount": 40,
+      "total_sell_order_amount": 0,
+      "percentage_difference": 26.85000000000001,
+      "balance": 12.29569549,
+      "audbalance": 50.74,
+      "rate": 4.126617,
+      "buy_orders": [
+        {
+          "otc": false,
+          "market": "SCRT/AUD",
+          "amount": 12.29569549,
+          "created": "2021-02-11T01:54:13.840Z",
+          "audfeeExGst": 0.360036,
+          "audGst": 0.0360036,
+          "audtotal": 40
+        }
+      ],
+      "sell_orders": []
+    },
+    {
+      "profit": 5.979999999999999,
+      "shortName": "BCH",
+      "total_aud_spent": 6.470000000000001,
+      "total_buy_order_amount": 6.470000000000001,
+      "total_sell_order_amount": 0,
+      "percentage_difference": 92.42658423493042,
+      "balance": 0.01745205,
+      "audbalance": 12.45,
+      "rate": 713.4,
+      "buy_orders": [
+        {
+          "otc": false,
+          "market": "BCH/AUD",
+          "amount": 0.00893003,
+          "created": "2020-10-28T00:39:49.776Z",
+          "audfeeExGst": 0.03119242,
+          "audGst": 0.00311924,
+          "audtotal": 3.47
+        },
+        {
+          "otc": false,
+          "market": "BCH/AUD",
+          "amount": 0.00852202,
+          "created": "2020-10-13T05:51:35.658Z",
+          "audfeeExGst": 0.0270204,
+          "audGst": 0.00270204,
+          "audtotal": 3
+        }
+      ],
+      "sell_orders": []
+    },
+    {
+      "profit": 0.21999999999999886,
+      "shortName": "BSV",
+      "total_aud_spent": 6.210000000000001,
+      "total_buy_order_amount": 6.210000000000001,
+      "total_sell_order_amount": 0,
+      "percentage_difference": 3.5426731078904803,
+      "balance": 0.02463798,
+      "audbalance": 6.43,
+      "rate": 260.88,
+      "buy_orders": [
+        {
+          "otc": false,
+          "market": "BSV/AUD",
+          "amount": 0.0126072,
+          "created": "2020-10-28T00:39:49.776Z",
+          "audfeeExGst": 0.02918155,
+          "audGst": 0.00291815,
+          "audtotal": 3.24
+        },
+        {
+          "otc": false,
+          "market": "BSV/AUD",
+          "amount": 0.01203078,
+          "created": "2020-10-13T05:51:35.658Z",
+          "audfeeExGst": 0.02671786,
+          "audGst": 0.00267179,
+          "audtotal": 2.97
+        }
+      ],
+      "sell_orders": []
+    },
+    {
+      "profit": -28.819999999999993,
+      "shortName": "QTUM",
+      "total_aud_spent": 100,
+      "total_buy_order_amount": 100,
+      "total_sell_order_amount": 0,
+      "percentage_difference": -28.819999999999997,
+      "balance": 8.76570156,
+      "audbalance": 71.18,
+      "rate": 8.1199,
+      "buy_orders": [
+        {
+          "otc": false,
+          "market": "QTUM/AUD",
+          "amount": 8.76570156,
+          "created": "2021-02-11T01:53:15.516Z",
+          "audfeeExGst": 0.90009001,
+          "audGst": 0.090009,
+          "audtotal": 100
+        }
+      ],
+      "sell_orders": []
+    },
+    {
+      "profit": 79.02,
+      "shortName": "FUN",
+      "total_aud_spent": 10,
+      "total_buy_order_amount": 10,
+      "total_sell_order_amount": 0,
+      "percentage_difference": 790.1999999999999,
+      "balance": 1873.71182312,
+      "audbalance": 89.02,
+      "rate": 0.047512,
+      "buy_orders": [
+        {
+          "otc": false,
+          "market": "FUN/AUD",
+          "amount": 1873.71182312,
+          "created": "2020-10-28T00:44:04.926Z",
+          "audfeeExGst": 0.090009,
+          "audGst": 0.0090009,
+          "audtotal": 10
+        }
+      ],
+      "sell_orders": []
+    },
+    {
+      "profit": 34.26,
+      "shortName": "RDD",
+      "total_aud_spent": 10,
+      "total_buy_order_amount": 10,
+      "total_sell_order_amount": 0,
+      "percentage_difference": 342.59999999999997,
+      "balance": 7220.21660649,
+      "audbalance": 44.26,
+      "rate": 0.006131,
+      "buy_orders": [
+        {
+          "otc": false,
+          "market": "RDD/AUD",
+          "amount": 7220.21660649,
+          "created": "2020-09-30T23:27:14.225Z",
+          "audfeeExGst": 0.090009,
+          "audGst": 0.0090009,
+          "audtotal": 10
+        }
+      ],
+      "sell_orders": []
+    },
+    {
+      "profit": 6.590000000000003,
+      "shortName": "SC",
+      "total_aud_spent": 50,
+      "total_buy_order_amount": 50,
+      "total_sell_order_amount": 0,
+      "percentage_difference": 13.180000000000005,
+      "balance": 2172.02432667,
+      "audbalance": 56.59,
+      "rate": 0.026055,
+      "buy_orders": [
+        {
+          "otc": false,
+          "market": "SCRT/AUD",
+          "amount": 12.29569549,
+          "created": "2021-02-11T01:54:13.840Z",
+          "audfeeExGst": 0.360036,
+          "audGst": 0.0360036,
+          "audtotal": 40
+        },
+        {
+          "otc": false,
+          "market": "SC/AUD",
+          "amount": 2172.02432667,
+          "created": "2020-10-13T05:50:40.443Z",
+          "audfeeExGst": 0.090009,
+          "audGst": 0.0090009,
+          "audtotal": 10
+        }
+      ],
+      "sell_orders": []
+    },
+    {
+      "profit": 2.710000000000001,
+      "shortName": "EOS",
+      "total_aud_spent": 6.359999999999999,
+      "total_buy_order_amount": 6.359999999999999,
+      "total_sell_order_amount": 0,
+      "percentage_difference": 42.61006289308178,
+      "balance": 1.64253921,
+      "audbalance": 9.07,
+      "rate": 5.519,
+      "buy_orders": [
+        {
+          "otc": false,
+          "market": "EOS/AUD",
+          "amount": 0.84047974,
+          "created": "2020-10-28T00:39:49.776Z",
+          "audfeeExGst": 0.0295628,
+          "audGst": 0.00295628,
+          "audtotal": 3.28
+        },
+        {
+          "otc": false,
+          "market": "EOS/AUD",
+          "amount": 0.80205947,
+          "created": "2020-10-13T05:51:35.658Z",
+          "audfeeExGst": 0.02771473,
+          "audGst": 0.00277147,
+          "audtotal": 3.08
+        }
+      ],
+      "sell_orders": []
+    },
+    {
+      "profit": 218.15000000000003,
+      "shortName": "MIOTA",
+      "total_aud_spent": 100.01,
+      "total_buy_order_amount": 100.01,
+      "total_sell_order_amount": 0,
+      "percentage_difference": 218.1281871812819,
+      "balance": 178.34276766,
+      "audbalance": 318.16,
+      "rate": 1.783986,
+      "buy_orders": [
+        {
+          "otc": false,
+          "market": "MIOTA/AUD",
+          "amount": 178.34276766,
+          "created": "2021-02-02T01:45:12.998Z",
+          "audfeeExGst": 0.90018002,
+          "audGst": 0.090018,
+          "audtotal": 100.01
+        }
+      ],
+      "sell_orders": []
+    },
+    {
+      "profit": 763.1299999999997,
+      "shortName": "DOGE",
+      "total_aud_spent": -763.1299999999997,
+      "total_buy_order_amount": 2520.01,
+      "total_sell_order_amount": 3283.14,
+      "percentage_difference": -100,
+      "balance": 0.00000307,
+      "audbalance": 0,
+      "rate": 0.076726,
+      "buy_orders": [
+        {
+          "otc": false,
+          "market": "DOGE/AUD",
+          "amount": 5132.52171056,
+          "created": "2021-02-11T06:10:32.748Z",
+          "audfeeExGst": 4.50045005,
+          "audGst": 0.450045,
+          "audtotal": 500
+        },
+        {
+          "otc": false,
+          "market": "DOGE/AUD",
+          "amount": 7754.686046,
+          "created": "2021-02-08T21:43:24.773Z",
+          "audfeeExGst": 6.30063006,
+          "audGst": 0.63006301,
+          "audtotal": 700
+        },
+        {
+          "otc": false,
+          "market": "DOGE/AUD",
+          "amount": 2275.51995631,
+          "created": "2021-01-30T05:13:16.327Z",
+          "audfeeExGst": 0.90009001,
+          "audGst": 0.090009,
+          "audtotal": 100
+        },
+        {
+          "otc": false,
+          "market": "DOGE/AUD",
+          "amount": 4096.59777555,
+          "created": "2021-01-30T01:45:16.402Z",
+          "audfeeExGst": 1.80018002,
+          "audGst": 0.180018,
+          "audtotal": 200
+        },
+        {
+          "otc": false,
+          "market": "DOGE/AUD",
+          "amount": 3088.75538601,
+          "created": "2021-01-30T01:31:36.370Z",
+          "audfeeExGst": 1.80018002,
+          "audGst": 0.180018,
+          "audtotal": 200
+        },
+        {
+          "otc": false,
+          "market": "DOGE/AUD",
+          "amount": 167.07321148,
+          "created": "2021-01-30T01:22:55.415Z",
+          "audfeeExGst": 0.090009,
+          "audGst": 0.0090009,
+          "audtotal": 10
+        },
+        {
+          "otc": false,
+          "market": "DOGE/AUD",
+          "amount": 3068.94382298,
+          "created": "2021-01-29T11:05:21.990Z",
+          "audfeeExGst": 1.80027003,
+          "audGst": 0.180027,
+          "audtotal": 200.01
+        },
+        {
+          "otc": false,
+          "market": "DOGE/AUD",
+          "amount": 2768.20440421,
+          "created": "2021-01-29T08:37:53.283Z",
+          "audfeeExGst": 1.80018002,
+          "audGst": 0.180018,
+          "audtotal": 200
+        },
+        {
+          "otc": false,
+          "market": "DOGE/AUD",
+          "amount": 2733.92112637,
+          "created": "2021-01-29T08:37:29.671Z",
+          "audfeeExGst": 1.80018002,
+          "audGst": 0.180018,
+          "audtotal": 200
+        },
+        {
+          "otc": false,
+          "market": "DOGE/AUD",
+          "amount": 1917.30656773,
+          "created": "2021-01-29T04:39:30.480Z",
+          "audfeeExGst": 1.80018002,
+          "audGst": 0.180018,
+          "audtotal": 200
+        },
+        {
+          "otc": false,
+          "market": "DOGE/AUD",
+          "amount": 2534.85424587,
+          "created": "2020-10-13T05:49:57.511Z",
+          "audfeeExGst": 0.090009,
+          "audGst": 0.0090009,
+          "audtotal": 10
+        }
+      ],
+      "sell_orders": [
+        {
+          "otc": false,
+          "market": "DOGE/VTHO",
+          "amount": 5132.52425,
+          "total": 42984.14107588085,
+          "created": "2021-02-13T05:20:50.534Z",
+          "audfeeExGst": 4.18841126,
+          "audGst": 0.41884113,
+          "audtotal": 456.12
+        },
+        {
+          "otc": false,
+          "market": "DOGE/AUD",
+          "amount": 23405.86,
+          "total": 2125.6031759,
+          "created": "2021-02-09T20:56:12.279Z",
+          "audfeeExGst": 19.51885377,
+          "audGst": 1.95188538,
+          "audtotal": 2125.6
+        },
+        {
+          "otc": false,
+          "market": "DOGE/AUD",
+          "amount": 7000,
+          "total": 701.421,
+          "created": "2021-02-07T20:14:53.315Z",
+          "audfeeExGst": 6.44096419,
+          "audGst": 0.64409642,
+          "audtotal": 701.42
+        }
+      ]
+    },
+    {
+      "profit": -177.11,
+      "shortName": "XRP",
+      "total_aud_spent": 381.86,
+      "total_buy_order_amount": 651.14,
+      "total_sell_order_amount": 269.28,
+      "percentage_difference": -46.38087257109936,
+      "balance": 330.26395914,
+      "audbalance": 204.75,
+      "rate": 0.61995,
+      "buy_orders": [
+        {
+          "otc": false,
+          "market": "XRP/AUD",
+          "amount": 145.26395914,
+          "created": "2021-02-11T01:55:48.301Z",
+          "audfeeExGst": 0.90009001,
+          "audGst": 0.090009,
+          "audtotal": 100
+        },
+        {
+          "otc": false,
+          "market": "XRP/AUD",
+          "amount": 17.36183451,
+          "created": "2020-12-23T02:45:16.877Z",
+          "audfeeExGst": 0.09009901,
+          "audGst": 0.0090099,
+          "audtotal": 10.01
+        },
+        {
+          "otc": false,
+          "market": "XRP/AUD",
+          "amount": 13.21412431,
+          "created": "2020-12-21T09:33:05.001Z",
+          "audfeeExGst": 0.090009,
+          "audGst": 0.0090009,
+          "audtotal": 10
+        },
+        {
+          "otc": false,
+          "market": "XRP/AUD",
+          "amount": 165.94315451,
+          "created": "2020-12-19T06:41:13.438Z",
+          "audfeeExGst": 0.90009001,
+          "audGst": 0.090009,
+          "audtotal": 100
+        },
+        {
+          "otc": false,
+          "market": "XRP/AUD",
+          "amount": 165.14104849,
+          "created": "2020-11-25T03:44:48.661Z",
+          "audfeeExGst": 1.34777689,
+          "audGst": 0.13477769,
+          "audtotal": 149.74
+        },
+        {
+          "otc": false,
+          "market": "XRP/AUD",
+          "amount": 19.68010682,
+          "created": "2020-11-24T01:26:38.973Z",
+          "audfeeExGst": 0.1521313,
+          "audGst": 0.01521313,
+          "audtotal": 16.9
+        },
+        {
+          "otc": false,
+          "market": "XRP/AUD",
+          "amount": 12.60711622,
+          "created": "2020-10-28T00:39:49.776Z",
+          "audfeeExGst": 0.04173387,
+          "audGst": 0.00417339,
+          "audtotal": 4.64
+        },
+        {
+          "otc": false,
+          "market": "XRP/AUD",
+          "amount": 674.15790934,
+          "created": "2020-10-21T22:44:42.485Z",
+          "audfeeExGst": 2.25022502,
+          "audGst": 0.2250225,
+          "audtotal": 250
+        },
+        {
+          "otc": false,
+          "market": "XRP/AUD",
+          "amount": 14.38192787,
+          "created": "2020-10-21T22:41:34.379Z",
+          "audfeeExGst": 0.0479748,
+          "audGst": 0.00479748,
+          "audtotal": 5.33
+        },
+        {
+          "otc": false,
+          "market": "XRP/AUD",
+          "amount": 12.03102955,
+          "created": "2020-10-13T05:51:35.658Z",
+          "audfeeExGst": 0.04064669,
+          "audGst": 0.00406467,
+          "audtotal": 4.52
+        }
+      ],
+      "sell_orders": [
+        {
+          "otc": false,
+          "market": "XRP/AUD",
+          "amount": 913.51825162,
+          "total": 269.27594799352414,
+          "created": "2020-12-29T01:10:18.564Z",
+          "audfeeExGst": 2.47269006,
+          "audGst": 0.24726901,
+          "audtotal": 269.28
+        }
+      ]
+    },
+    {
+      "profit": 42.42,
+      "shortName": "TRX",
+      "total_aud_spent": 50,
+      "total_buy_order_amount": 50,
+      "total_sell_order_amount": 0,
+      "percentage_difference": 84.84,
+      "balance": 1296.84865775,
+      "audbalance": 92.42,
+      "rate": 0.071267,
+      "buy_orders": [
+        {
+          "otc": false,
+          "market": "TRX/AUD",
+          "amount": 1296.84865775,
+          "created": "2021-01-05T22:46:13.521Z",
+          "audfeeExGst": 0.450045,
+          "audGst": 0.0450045,
+          "audtotal": 50
+        }
+      ],
+      "sell_orders": []
+    },
+    {
+      "profit": -7.859999999999999,
+      "shortName": "POE",
+      "total_aud_spent": 10,
+      "total_buy_order_amount": 10,
+      "total_sell_order_amount": 0,
+      "percentage_difference": -78.6,
+      "balance": 4217.62969211,
+      "audbalance": 2.14,
+      "rate": 0.000508,
+      "buy_orders": [
+        {
+          "otc": false,
+          "market": "POE/AUD",
+          "amount": 4217.62969211,
+          "created": "2020-10-28T00:42:43.533Z",
+          "audfeeExGst": 0.090009,
+          "audGst": 0.0090009,
+          "audtotal": 10
+        }
+      ],
+      "sell_orders": []
+    },
+    {
+      "profit": 6419.18,
+      "shortName": "VET",
+      "total_aud_spent": 1078.53,
+      "total_buy_order_amount": 1078.53,
+      "total_sell_order_amount": 0,
+      "percentage_difference": 595.1786227550463,
+      "balance": 69886.28211949,
+      "audbalance": 7497.71,
+      "rate": 0.107284,
+      "buy_orders": [
+        {
+          "otc": false,
+          "market": "VET/AUD",
+          "amount": 3116.26281453,
+          "created": "2021-02-17T11:32:12.838Z",
+          "audfeeExGst": 1.92619262,
+          "audGst": 0.19261926,
+          "audtotal": 214
+        },
+        {
+          "otc": false,
+          "market": "VET/AUD",
+          "amount": 1322.33153496,
+          "created": "2021-01-05T22:48:12.759Z",
+          "audfeeExGst": 0.450045,
+          "audGst": 0.0450045,
+          "audtotal": 50
+        },
+        {
+          "otc": false,
+          "market": "VET/AUD",
+          "amount": 2200.220022,
+          "created": "2020-12-13T01:12:34.925Z",
+          "audfeeExGst": 0.450045,
+          "audGst": 0.0450045,
+          "audtotal": 50
+        },
+        {
+          "otc": false,
+          "market": "VET/AUD",
+          "amount": 854.26277122,
+          "created": "2020-11-24T01:26:04.766Z",
+          "audfeeExGst": 0.180018,
+          "audGst": 0.0180018,
+          "audtotal": 20
+        },
+        {
+          "otc": false,
+          "market": "VET/AUD",
+          "amount": 17477.64622723,
+          "created": "2020-07-08T09:18:25.312Z",
+          "audfeeExGst": 4.45121512,
+          "audGst": 0.44512151,
+          "audtotal": 494.53
+        },
+        {
+          "otc": false,
+          "market": "VET/AUD",
+          "amount": 44915.55874955,
+          "created": "2020-03-19T22:44:33.019Z",
+          "audfeeExGst": 2.25022502,
+          "audGst": 0.2250225,
+          "audtotal": 250
+        }
+      ],
+      "sell_orders": []
+    },
+    {
+      "profit": 3358.73,
+      "shortName": "VTHO",
+      "total_aud_spent": 474.82000000000016,
+      "total_buy_order_amount": 2000,
+      "total_sell_order_amount": 1525.1799999999998,
+      "percentage_difference": 707.369108293669,
+      "balance": 251045.1932323,
+      "audbalance": 3833.55,
+      "rate": 0.01527,
+      "buy_orders": [
+        {
+          "otc": false,
+          "market": "VTHO/AUD",
+          "amount": 207039.33747412,
+          "created": "2021-02-12T22:09:19.286Z",
+          "audfeeExGst": 9.00090009,
+          "audGst": 0.90009001,
+          "audtotal": 1000
+        },
+        {
+          "otc": false,
+          "market": "VTHO/AUD",
+          "amount": 137779.00248001,
+          "created": "2020-07-24T08:39:59.618Z",
+          "audfeeExGst": 4.50045005,
+          "audGst": 0.450045,
+          "audtotal": 500
+        },
+        {
+          "otc": false,
+          "market": "VTHO/AUD",
+          "amount": 137174.21124827,
+          "created": "2020-07-24T08:35:36.126Z",
+          "audfeeExGst": 4.50045005,
+          "audGst": 0.450045,
+          "audtotal": 500
+        }
+      ],
+      "sell_orders": [
+        {
+          "otc": false,
+          "market": "DOGE/VTHO",
+          "amount": 5132.52425,
+          "total": 42984.14107588085,
+          "created": "2021-02-13T05:20:50.534Z",
+          "audfeeExGst": 4.18841126,
+          "audGst": 0.41884113,
+          "audtotal": 456.12
+        },
+        {
+          "otc": false,
+          "market": "VTHO/AUD",
+          "amount": 279784.49069,
+          "total": 1069.05653892649,
+          "created": "2021-02-09T21:21:18.490Z",
+          "audfeeExGst": 9.81686445,
+          "audGst": 0.98168645,
+          "audtotal": 1069.06
+        }
+      ]
+    },
+    {
+      "profit": 136.61,
+      "shortName": "DENT",
+      "total_aud_spent": 10,
+      "total_buy_order_amount": 10,
+      "total_sell_order_amount": 0,
+      "percentage_difference": 1366.1000000000001,
+      "balance": 30864.19753086,
+      "audbalance": 146.61,
+      "rate": 0.00475,
+      "buy_orders": [
+        {
+          "otc": false,
+          "market": "DENT/AUD",
+          "amount": 30864.19753086,
+          "created": "2020-09-30T23:25:31.734Z",
+          "audfeeExGst": 0.090009,
+          "audGst": 0.0090009,
+          "audtotal": 10
+        }
+      ],
+      "sell_orders": []
+    },
+    {
+      "profit": 30.61,
+      "shortName": "ETN",
+      "total_aud_spent": 10,
+      "total_buy_order_amount": 10,
+      "total_sell_order_amount": 0,
+      "percentage_difference": 306.1,
+      "balance": 1605.39412425,
+      "audbalance": 40.61,
+      "rate": 0.025296,
+      "buy_orders": [
+        {
+          "otc": false,
+          "market": "ETN/AUD",
+          "amount": 1605.39412425,
+          "created": "2020-11-24T01:33:56.095Z",
+          "audfeeExGst": 0.090009,
+          "audGst": 0.0090009,
+          "audtotal": 10
+        }
+      ],
+      "sell_orders": []
+    },
+    {
+      "profit": -0.9299999999999997,
+      "shortName": "TNT",
+      "total_aud_spent": 10,
+      "total_buy_order_amount": 10,
+      "total_sell_order_amount": 0,
+      "percentage_difference": -9.299999999999997,
+      "balance": 789.01688496,
+      "audbalance": 9.07,
+      "rate": 0.011498,
+      "buy_orders": [
+        {
+          "otc": false,
+          "market": "TNT/AUD",
+          "amount": 789.01688496,
+          "created": "2020-09-30T23:27:58.771Z",
+          "audfeeExGst": 0.090009,
+          "audGst": 0.0090009,
+          "audtotal": 10
+        }
+      ],
+      "sell_orders": []
+    },
+    {
+      "profit": 21.78,
+      "shortName": "NIM",
+      "total_aud_spent": 10,
+      "total_buy_order_amount": 10,
+      "total_sell_order_amount": 0,
+      "percentage_difference": 217.79999999999998,
+      "balance": 2592.68861809,
+      "audbalance": 31.78,
+      "rate": 0.012256,
+      "buy_orders": [
+        {
+          "otc": false,
+          "market": "NIM/AUD",
+          "amount": 2592.68861809,
+          "created": "2020-10-13T05:49:35.784Z",
+          "audfeeExGst": 0.090009,
+          "audGst": 0.0090009,
+          "audtotal": 10
+        }
+      ],
+      "sell_orders": []
+    },
+    {
+      "profit": 2.4200000000000017,
+      "shortName": "PNT",
+      "total_aud_spent": 20,
+      "total_buy_order_amount": 20,
+      "total_sell_order_amount": 0,
+      "percentage_difference": 12.100000000000009,
+      "balance": 8.01658791,
+      "audbalance": 22.42,
+      "rate": 2.797057,
+      "buy_orders": [
+        {
+          "otc": false,
+          "market": "PNT/AUD",
+          "amount": 8.01658791,
+          "created": "2021-02-11T01:52:49.889Z",
+          "audfeeExGst": 0.180018,
+          "audGst": 0.0180018,
+          "audtotal": 20
+        }
+      ],
+      "sell_orders": []
+    },
+    {
+      "profit": 46.42,
+      "shortName": "TROY",
+      "total_aud_spent": 10,
+      "total_buy_order_amount": 10,
+      "total_sell_order_amount": 0,
+      "percentage_difference": 464.20000000000005,
+      "balance": 2122.24108657,
+      "audbalance": 56.42,
+      "rate": 0.026586,
+      "buy_orders": [
+        {
+          "otc": false,
+          "market": "TROY/AUD",
+          "amount": 2122.24108657,
+          "created": "2020-10-13T05:50:57.810Z",
+          "audfeeExGst": 0.090009,
+          "audGst": 0.0090009,
+          "audtotal": 10
+        }
+      ],
+      "sell_orders": []
+    },
+    {
+      "profit": 37.36,
+      "shortName": "DREP",
+      "total_aud_spent": 10,
+      "total_buy_order_amount": 10,
+      "total_sell_order_amount": 0,
+      "percentage_difference": 373.59999999999997,
+      "balance": 1872.65917602,
+      "audbalance": 47.36,
+      "rate": 0.025288,
+      "buy_orders": [
+        {
+          "otc": false,
+          "market": "DREP/AUD",
+          "amount": 1872.65917602,
+          "created": "2020-10-28T00:44:58.338Z",
+          "audfeeExGst": 0.090009,
+          "audGst": 0.0090009,
+          "audtotal": 10
+        }
+      ],
+      "sell_orders": []
+    },
+    {
+      "profit": 7.030000000000001,
+      "shortName": "CTSI",
+      "total_aud_spent": 20,
+      "total_buy_order_amount": 20,
+      "total_sell_order_amount": 0,
+      "percentage_difference": 35.150000000000006,
+      "balance": 63.90552207,
+      "audbalance": 27.03,
+      "rate": 0.423007,
+      "buy_orders": [
+        {
+          "otc": false,
+          "market": "CTSI/AUD",
+          "amount": 63.90552207,
+          "created": "2021-02-11T01:52:28.573Z",
+          "audfeeExGst": 0.180018,
+          "audGst": 0.0180018,
+          "audtotal": 20
+        }
+      ],
+      "sell_orders": []
+    },
+    {
+      "profit": 68.77,
+      "shortName": "MBL",
+      "total_aud_spent": 10,
+      "total_buy_order_amount": 10,
+      "total_sell_order_amount": 0,
+      "percentage_difference": 687.6999999999999,
+      "balance": 4649.0004649,
+      "audbalance": 78.77,
+      "rate": 0.016944,
+      "buy_orders": [
+        {
+          "otc": false,
+          "market": "MBL/AUD",
+          "amount": 4649.0004649,
+          "created": "2020-11-24T01:32:52.584Z",
+          "audfeeExGst": 0.090009,
+          "audGst": 0.0090009,
+          "audtotal": 10
+        }
+      ],
+      "sell_orders": []
+    },
+    {
+      "profit": 35.77,
+      "shortName": "COCOS",
+      "total_aud_spent": 10,
+      "total_buy_order_amount": 10,
+      "total_sell_order_amount": 0,
+      "percentage_difference": 357.70000000000005,
+      "balance": 24.63054187,
+      "audbalance": 45.77,
+      "rate": 1.858085,
+      "buy_orders": [
+        {
+          "otc": false,
+          "market": "COCOS/AUD",
+          "amount": 24630.54187192,
+          "created": "2020-10-28T00:41:55.526Z",
+          "audfeeExGst": 0.090009,
+          "audGst": 0.0090009,
+          "audtotal": 10
+        }
+      ],
+      "sell_orders": []
+    },
+    {
+      "profit": 15.620000000000001,
+      "shortName": "WIN",
+      "total_aud_spent": 10,
+      "total_buy_order_amount": 10,
+      "total_sell_order_amount": 0,
+      "percentage_difference": 156.20000000000002,
+      "balance": 72992.70072992,
+      "audbalance": 25.62,
+      "rate": 0.000351,
+      "buy_orders": [
+        {
+          "otc": false,
+          "market": "WIN/AUD",
+          "amount": 72992.70072992,
+          "created": "2020-11-24T01:29:34.401Z",
+          "audfeeExGst": 0.090009,
+          "audGst": 0.0090009,
+          "audtotal": 10
+        }
+      ],
+      "sell_orders": []
+    }
+  ]
+}

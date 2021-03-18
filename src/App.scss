@@ -1,0 +1,177 @@
+html {
+  font-size: 14px;
+}
+
+.App {
+  text-align: center;
+  background-color: #2eb7e1;
+  height: 100vh;
+  color: #282c34;
+
+  --spacing-xs: 0.33rem;
+  --spacing-s: 0.5rem;
+  --spacing-m: 1rem;
+  --spacing-l: 1.5rem;
+}
+
+label {
+  padding: 0 var(--spacing-m);
+  margin-bottom: var(--spacing-m);
+
+  :first-child {
+    width: 100%;
+  }
+}
+
+input,
+a .rs-picker-toggle-value {
+  font-size: 1rem !important;
+}
+
+.fit-parent {
+  height: 100%;
+  width: 100%;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-auto {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  min-width: 0;
+  min-height: 0;
+}
+
+.flex-center {
+  @extend .flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-column {
+  @extend .flex;
+  flex-direction: column;
+}
+
+.p1 {
+  padding: var(--spacing-xs);
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.api-key {
+  padding: var(--spacing-s) 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
+  label {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    &:first-child {
+      margin-top: var(--spacing-s);
+      width: 100%;
+    }
+  }
+
+  button {
+    padding: var(--spacing-s) var(--spacing-m);
+    border-radius: 3px;
+    background: white;
+    margin-top: var(--spacing-s);
+    font-size: 1rem;
+  }
+}
+
+.overview {
+  background: white;
+  display: flex;
+  border-radius: 0 0 5px 5px;
+  flex-direction: column;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+  position: relative;
+  z-index: 2;
+
+  h4 {
+    margin: var(--spacing-m) 0;
+  }
+
+  .totals {
+    margin-bottom: var(--spacing-m);
+    padding: 0 var(--spacing-m);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  label {
+    padding: 0 var(--spacing-m);
+    margin-bottom: var(--spacing-m);
+
+    :first-child {
+      width: 100%;
+    }
+  }
+}
+p,
+p + p {
+  margin: 0;
+  margin-top: 0 !important;
+}
+
+h4 {
+  font-size: 1.2rem !important;
+}
+
+p.amount {
+  @extend .flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 1rem;
+
+  .label {
+    color: rgba(0, 0, 0, 0.6);
+    text-transform: uppercase;
+    font-size: 0.8rem;
+  }
+
+  .increase {
+    color: green;
+  }
+  .decrease {
+    color: red;
+  }
+}
+
+.coin-data-container {
+  overflow: scroll;
+  padding: var(--spacing-m) var(--spacing-m);
+
+  .coin-data-card {
+    background: white;
+    display: flex;
+    border-radius: 5px;
+    flex-direction: column;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+    margin-bottom: var(--spacing-m);
+    padding: var(--spacing-xs);
+
+    .section {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    h3 {
+      margin: 0;
+    }
+  }
+}
