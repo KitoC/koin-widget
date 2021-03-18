@@ -15,19 +15,26 @@ const getAmountClass = (amount) => {
 };
 
 const Amount = (props) => {
-  const { amount, label, profit, prefix, affix, precision = 2 } = props;
+  const {
+    amount,
+    className,
+    label,
+    profit,
+    prefix,
+    affix,
+    precision = 2,
+  } = props;
 
   const value = precision ? round(amount, precision) : amount;
 
   return (
-    <p className="amount bold">
-      {label && <span className="label">{label} </span>}
-
-      <span className={getAmountClass(profit)}>
+    <p className={`amount bold  ${className}`}>
+      <span className={`value ${getAmountClass(profit)}`}>
         {prefix}
         {value}
         {affix}
       </span>
+      {label && <span className="label">{label} </span>}
     </p>
   );
 };

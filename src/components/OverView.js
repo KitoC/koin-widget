@@ -60,44 +60,52 @@ const OverView = ({ data }) => {
   return (
     <>
       <div className="overview">
-        <h4>Overview</h4>
-        <div className="totals">
-          <Amount
-            prefix="$"
-            label="aud balance"
-            amount={total_coin_balance_in_aud}
-          />
+        <div className="totals-container">
+          <div className="totals balance flex-center">
+            <Amount
+              prefix="$"
+              label="total balance"
+              className="large"
+              profit={total_coin_balance_in_aud}
+              amount={total_coin_balance_in_aud}
+            />
+          </div>
 
-          <Amount
-            showColor
-            prefix="$"
-            label="aud spent"
-            profit={-Math.abs(total_aud_spent)}
-            amount={Math.abs(total_aud_spent)}
-          />
-          <Amount
-            showColor
-            prefix="$"
-            label="profit"
-            profit={total_profit}
-            amount={total_profit}
-          />
-          <Amount
-            showColor
-            affix="%"
-            label="difference"
-            profit={total_percentage_difference}
-            amount={total_percentage_difference}
-          />
+          <div className="totals flex-between">
+            <Amount
+              showColor
+              prefix="$"
+              label="spent to date"
+              className="medium"
+              profit={-Math.abs(total_aud_spent)}
+              amount={Math.abs(total_aud_spent)}
+            />
+            <Amount
+              showColor
+              prefix="$"
+              label="profit to date"
+              className="medium"
+              profit={total_profit}
+              amount={total_profit}
+            />
+            <Amount
+              showColor
+              affix="%"
+              label="change to date"
+              className="medium"
+              profit={total_percentage_difference}
+              amount={total_percentage_difference}
+            />
+          </div>
         </div>
-        <label>
+
+        <div className="inputs">
           <Input
             placeholder="search"
             value={searchValue}
             onChange={setSearchValue}
           />
-        </label>
-        <label>
+
           <SelectPicker
             value={filterValue}
             searchable={false}
@@ -105,7 +113,7 @@ const OverView = ({ data }) => {
             onChange={setFilterValue}
             data={options}
           />
-        </label>
+        </div>
       </div>
 
       <div className="coin-data-container flex-auto">

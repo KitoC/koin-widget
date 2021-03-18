@@ -15,7 +15,9 @@ const CoinDataCard = ({ coin }) => {
     <div className="coin-data">
       <div className="coin-data-card">
         <div className="section flex p1">
-          <h4 className="bold">{shortName}</h4>
+          <h4 className="bold">
+            {shortName} - ${rate}
+          </h4>
         </div>
 
         <div className="section flex p1">
@@ -25,35 +27,40 @@ const CoinDataCard = ({ coin }) => {
             label="balance"
             amount={balance}
           />
-          <Amount profit={profit} prefix="$" label="rate" amount={rate} />
+
+          {/* <Amount
+            precision={null}
+            profit={profit}
+            prefix="$"
+            label="rate"
+            amount={rate}
+          /> */}
+          <Amount
+            profit={profit}
+            prefix="$"
+            label="Value"
+            amount={audbalance}
+          />
         </div>
 
         <div className="section flex p1">
           <Amount
             profit={profit}
             prefix="$"
-            label="AUD balance"
-            amount={audbalance}
+            label="spent to date"
+            amount={Math.abs(total_aud_spent)}
           />
           <Amount
             profit={profit}
             prefix="$"
-            label="AUD spent"
-            amount={total_aud_spent}
-          />
-          <Amount
-            profit={profit}
-            prefix="$"
-            label="profit"
+            label="profit to date"
             amount={profit}
-            showColor
           />
           <Amount
             profit={profit}
             affix="%"
-            label="difference"
+            label="change to date"
             amount={percentage_difference}
-            showColor
           />
         </div>
       </div>
