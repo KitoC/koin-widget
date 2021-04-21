@@ -1,68 +1,64 @@
 import Amount from "./Amount";
 
-const CoinDataCard = ({ coin }) => {
+const AmountSection = ({ amounts }) => {
+  return (
+    <div className="section flex p1">
+      {amounts.map((amount, index) => {
+        return (
+          <Amount
+            className={`pos${index}`}
+            precision={amount.precision}
+            profit={amount.profit}
+            label={amount.label}
+            amount={amount.amount}
+            prefix={amount.prefix}
+            affix={amount.affix}
+          />
+        );
+      })}
+    </div>
+  );
+};
+
+const CoinDataCard = ({ coin, displayedValues }) => {
   const {
     profit,
     percentage_difference,
-    shortName,
-    audbalance,
+    short_name,
+    // aud_balance,
     balance,
     rate,
-    total_aud_spent,
+    // total_aud_spent,
+    // total_buy_order_amount,
+    // total_sell_order_amount,
+    unrealized_profit,
+    fiat_value,
   } = coin;
+
+  const amountSections = displayedValues.map((section) =>
+    section.map((amount) => ({
+      ...amount,
+      amount: coin[amount.key || amount.label],
+      profit: unrealized_profit,
+    }))
+  );
 
   return (
     <div className="coin-data">
       <div className="coin-data-card">
         <div className="section flex p1">
           <h4 className="bold">
-            {shortName} - ${rate}
+            {short_name} - ${rate} (${fiat_value})
           </h4>
-        </div>
-
-        <div className="section flex p1">
-          <Amount
-            precision={null}
-            profit={profit}
-            label="balance"
-            amount={balance}
-          />
-
-          {/* <Amount
-            precision={null}
-            profit={profit}
-            prefix="$"
-            label="rate"
-            amount={rate}
+          {/* <img
+            width="32px"
+            src="https://www.coinspot.com.au/public/img/coinmd/ravencoin.png"
           /> */}
-          <Amount
-            profit={profit}
-            prefix="$"
-            label="Value"
-            amount={audbalance}
-          />
         </div>
 
-        <div className="section flex p1">
-          <Amount
-            profit={profit}
-            prefix="$"
-            label="spent to date"
-            amount={Math.abs(total_aud_spent)}
-          />
-          <Amount
-            profit={profit}
-            prefix="$"
-            label="profit to date"
-            amount={profit}
-          />
-          <Amount
-            profit={profit}
-            affix="%"
-            label="change to date"
-            amount={percentage_difference}
-          />
-        </div>
+        {amountSections.map((amountSection) => (
+          <AmountSection amounts={amountSection} />
+        ))}
       </div>
     </div>
   );

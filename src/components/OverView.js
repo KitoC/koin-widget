@@ -4,31 +4,55 @@ import { useEffect, useState } from "react";
 import { SelectPicker, Input } from "rsuite";
 import Amount from "./Amount";
 import CoinDataCard from "./CoinDataCard";
-
-const createOptions = (label) => [
-  { label: `${startCase(label)} -- ASC`, value: `${label}:ASC` },
-  { label: `${startCase(label)} -- DSC`, value: `${label}:DSC` },
-];
-
-const options = [
-  ...createOptions("aud_balance"),
-  ...createOptions("profit"),
-  ...createOptions("balance"),
-  ...createOptions("aud_spent"),
-  ...createOptions("rate"),
-  ...createOptions("difference"),
-];
+import Menu from "./Menu";
 
 const keyMapping = {
   balance: "balance",
-  aud_balance: "audbalance",
+  aud_balance: "aud_balance",
   aud_spent: "total_aud_spent",
   profit: "profit",
   rate: "rate",
   difference: "percentage_difference",
 };
 
+const displayedValues = [
+  [
+    { precision: null, label: "balance" },
+    { precision: null, label: "fiat_value", prefix: "$" },
+  ],
+  [
+    { label: "unrealized_profit", prefix: "$" },
+    { label: "unrealized_cost_basis", prefix: "$" },
+  ],
+  [
+    { label: "realized_profit", prefix: "$" },
+    { label: "realized_cost_basis", prefix: "$" },
+  ],
+];
+
+const createFilterOptions = (coin) => {
+  const createOptions = (label) => [
+    { label: `${startCase(label)} -- ASC`, value: `${label}:ASC` },
+    { label: `${startCase(label)} -- DSC`, value: `${label}:DSC` },
+  ];
+
+  return displayedValues
+    .flat()
+    .map(({ label }) => createOptions(label))
+    .flat();
+
+  return [
+    ...createOptions("aud_balance"),
+    ...createOptions("profit"),
+    ...createOptions("balance"),
+    ...createOptions("aud_spent"),
+    ...createOptions("rate"),
+    ...createOptions("difference"),
+  ];
+};
+
 const OverView = ({ data }) => {
+  const options = createFilterOptions();
   const [searchValue, setSearchValue] = useState("");
   const [filterValue, setFilterValue] = useState(options[0].value);
 
@@ -47,56 +71,68 @@ const OverView = ({ data }) => {
   const sortedBalances = get(data, "balances", [])
     .sort(sortBalances)
     .filter((balance) =>
-      balance.shortName.toLowerCase().includes(searchValue.toLowerCase())
+      balance.short_name.toLowerCase().includes(searchValue.toLowerCase())
     );
 
   const {
-    total_coin_balance_in_aud = 0,
-    total_profit = 0,
-    total_aud_spent = 0,
-    total_percentage_difference = 0,
+    total_fiat = 0,
+    total_unrealized_profit = 0,
+    net_fiat_invested = 0,
+    total_unrealized_cost_basis = 0,
   } = data || {};
+
+  const totals = [
+    [
+      {
+        prefix: "$",
+        label: "total holdings",
+        amount: total_fiat,
+        profit: total_fiat,
+        className: "large",
+      },
+    ],
+    [
+      {
+        prefix: "$",
+        label: "unrealized profit",
+        amount: total_unrealized_profit,
+        profit: total_unrealized_profit,
+        className: "medium",
+      },
+      {
+        prefix: "$",
+        label: "unrealized cost basis",
+        amount: total_unrealized_cost_basis,
+        profit: -total_unrealized_cost_basis,
+        className: "medium",
+      },
+    ],
+    [
+      {
+        prefix: "$",
+        label: "net fiat invested",
+        amount: net_fiat_invested,
+        profit: -net_fiat_invested,
+        className: "medium",
+      },
+    ],
+  ];
 
   return (
     <>
       <div className="overview">
         <div className="totals-container">
-          <div className="totals balance flex-center">
-            <Amount
-              prefix="$"
-              label="total balance"
-              className="large"
-              profit={total_coin_balance_in_aud}
-              amount={total_coin_balance_in_aud}
-            />
-          </div>
-
-          <div className="totals flex-between">
-            <Amount
-              showColor
-              prefix="$"
-              label="spent to date"
-              className="medium"
-              profit={-Math.abs(total_aud_spent)}
-              amount={Math.abs(total_aud_spent)}
-            />
-            <Amount
-              showColor
-              prefix="$"
-              label="profit to date"
-              className="medium"
-              profit={total_profit}
-              amount={total_profit}
-            />
-            <Amount
-              showColor
-              affix="%"
-              label="change to date"
-              className="medium"
-              profit={total_percentage_difference}
-              amount={total_percentage_difference}
-            />
-          </div>
+          {totals.map((totalSection) => (
+            <div
+              className={`totals ${
+                totalSection.length > 1 ? "flex-between" : "flex-center"
+              }`}
+            >
+              {totalSection.map((total) => (
+                <Amount {...total} />
+              ))}
+            </div>
+          ))}
         </div>
 
         <div className="inputs">
@@ -118,9 +154,15 @@ const OverView = ({ data }) => {
 
       <div className="coin-data-container flex-auto">
         {sortedBalances.map((coin) => (
-          <CoinDataCard key={coin.shortName} coin={coin} />
+          <CoinDataCard
+            key={coin.short_name}
+            coin={coin}
+            displayedValues={displayedValues}
+          />
         ))}
       </div>
+
+      <Menu></Menu>
     </>
   );
 };

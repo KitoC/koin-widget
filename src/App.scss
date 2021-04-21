@@ -1,5 +1,5 @@
 html {
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .App {
@@ -7,7 +7,7 @@ html {
   --spacing-s: 0.5rem;
   --spacing-m: 1rem;
   --spacing-l: 1.5rem;
-  --spacing-xl: 3.5rem;
+  --spacing-xl: 2.5rem;
   --border-radius: 1.2rem;
 
   --linear-theme-1: linear-gradient(
@@ -173,6 +173,10 @@ a .rs-picker-toggle-value {
   .totals {
     width: 100%;
     border-radius: 0 0 var(--border-radius) var(--border-radius);
+
+    &:not(:last-child) {
+      margin-bottom: var(--spacing-s);
+    }
   }
 
   .inputs {
@@ -212,6 +216,14 @@ p.amount {
   flex-direction: column;
   align-items: center;
   font-size: 1rem;
+
+  &.pos0 {
+    align-items: flex-start;
+  }
+
+  &.pos1 {
+    align-items: flex-end;
+  }
 
   &.large {
     font-size: 2rem;
