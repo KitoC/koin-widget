@@ -2,9 +2,17 @@ import get from "lodash/get";
 import startCase from "lodash/startCase";
 import { useEffect, useState } from "react";
 import { SelectPicker, Input } from "rsuite";
+import styled from "styled-components";
 import Amount from "./Amount";
 import CoinDataCard from "./CoinDataCard";
 import Menu from "./Menu";
+
+const StyledContainer = styled.div(({ theme }) => ({
+  maxWidth: "1024px",
+  width: "100%",
+  display: "flex",
+  flexDirection: "column",
+}));
 
 const keyMapping = {
   balance: "balance",
@@ -88,7 +96,7 @@ const OverView = ({ data }) => {
         label: "total holdings",
         amount: total_fiat,
         profit: total_fiat,
-        className: "large",
+        size: "large",
       },
     ],
     [
@@ -97,14 +105,14 @@ const OverView = ({ data }) => {
         label: "unrealized profit",
         amount: total_unrealized_profit,
         profit: total_unrealized_profit,
-        className: "medium",
+        size: "medium",
       },
       {
         prefix: "$",
         label: "unrealized cost basis",
         amount: total_unrealized_cost_basis,
         profit: -total_unrealized_cost_basis,
-        className: "medium",
+        size: "medium",
       },
     ],
     [
@@ -113,13 +121,13 @@ const OverView = ({ data }) => {
         label: "net fiat invested",
         amount: net_fiat_invested,
         profit: -net_fiat_invested,
-        className: "medium",
+        size: "medium",
       },
     ],
   ];
 
   return (
-    <>
+    <StyledContainer>
       <div className="overview">
         <div className="totals-container">
           {totals.map((totalSection) => (
@@ -163,7 +171,7 @@ const OverView = ({ data }) => {
       </div>
 
       <Menu></Menu>
-    </>
+    </StyledContainer>
   );
 };
 

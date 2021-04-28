@@ -211,43 +211,6 @@ h4 {
   font-size: 1.2rem !important;
 }
 
-p.amount {
-  @extend .flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: 1rem;
-
-  &.pos0 {
-    align-items: flex-start;
-  }
-
-  &.pos1 {
-    align-items: flex-end;
-  }
-
-  &.large {
-    font-size: 2rem;
-  }
-
-  &.medium {
-    font-size: 1.4rem;
-  }
-
-  .label {
-    color: rgba(255, 255, 255, 0.5);
-    text-transform: uppercase;
-    font-size: 0.7rem;
-  }
-
-  .increase {
-    color: var(--color-increase);
-  }
-
-  .decrease {
-    color: var(--color-decrease);
-  }
-}
-
 .coin-data-container {
   overflow: scroll;
   padding: var(--spacing-m) var(--spacing-m);

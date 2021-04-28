@@ -1,12 +1,10 @@
 import { useMemo } from "react";
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Button } from "rsuite";
 import { Formik, Field, Form } from "formik";
 import { Input, FormBuilder } from "../Form";
 import styled from "styled-components";
 import api from "../../_config/api";
-import { useDispatch } from "react-redux";
-import { login } from "../../store/authentication/authenticationSlice.js";
 
 const Container = styled.div(({ theme }) => ({
   ...theme.utils.flexCenter,
@@ -34,6 +32,8 @@ const StyledLink = styled(Link)(({ theme }) => {
 const validateEmail = ({ email }) => {
   if (!email) {
     return "Required";
+  } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(email)) {
+    return "Invalid email address";
   }
 
   return undefined;
@@ -47,30 +47,43 @@ const validatePassword = ({ password }) => {
   return undefined;
 };
 
-const formConfig = ({ dispatch, history }) => ({
+const validatePasswordConfirm = ({ confirmPassword, password }) => {
+  if (confirmPassword !== password) {
+    return "Passwords must match";
+  }
+
+  return undefined;
+};
+
+const formConfig = (props) => ({
   validateOnChange: false,
   validate: (values) => {
     const errors = {};
 
     errors.email = validateEmail(values);
     errors.password = validatePassword(values);
+    errors.confirmPassword = validatePasswordConfirm(values);
 
+    Object.keys(errors).forEach((key) => {
+      if (!errors[key]) {
+        delete errors[key];
+      }
+    });
+
+    console.log({ errors });
     return errors;
   },
   onSubmit: async (values, actions) => {
+    console.log({ actions });
     try {
       actions.setSubmitting(true);
 
-      const { data } = await api.post("/api/v1/authentication/login", values);
-
-      dispatch(login(data.data.token));
-
-      history.push("/");
+      const res = await api.post("/api/v1/authentication/register", values);
     } catch (error) {}
   },
   buttons: [
     {
-      text: "Sign In",
+      text: "Create Account",
       props: { block: true, appearance: "primary", type: "submit" },
     },
   ],
@@ -79,27 +92,28 @@ const formConfig = ({ dispatch, history }) => ({
       fields: [
         { name: "email", type: "email", placeholder: "Email" },
         { name: "password", type: "password", placeholder: "Password" },
+        {
+          name: "confirmPassword",
+          type: "password",
+          placeholder: "Confirm Password",
+        },
       ],
     },
   ],
 });
 
-const Login = () => {
-  const dispatch = useDispatch();
-  const history = useHistory();
-  const config = useMemo(() => formConfig({ dispatch, history }));
+const Register = () => {
+  const config = useMemo(() => formConfig());
 
   return (
     <Container>
       <Card shaded>
-        <h4>Sign In</h4>
+        <h4>Create your Account</h4>
         <FormBuilder formConfig={config} />
-        <StyledLink to={`/auth/register`}>
-          Need an account? Register now.
-        </StyledLink>
+        <StyledLink to={`/login`}>Have an account already? Sign In.</StyledLink>
       </Card>
     </Container>
   );
 };
 
-export default Login;
+export default Register;

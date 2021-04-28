@@ -1,5 +1,37 @@
 import round from "lodash/round";
 import startCase from "lodash/startCase";
+import styled from "styled-components";
+import classnames from "classnames";
+
+const StyledAmount = styled.p(({ theme, ...props }) => {
+  const { rightAlign, alignment = "center" } = props;
+
+  let alignments = { center: "center", left: "flex-start", right: "flex-end" };
+
+  return {
+    ...theme.utils.flexColumn,
+    fontSize: "1rem",
+    fontWeight: 600,
+    alignItems: alignments[alignment],
+    "&.large": {
+      fontSize: "2rem",
+    },
+    "&.medium": {
+      fontSize: "1.4rem",
+    },
+    "& .increase": {
+      color: theme.colors.increase,
+    },
+    "& .decrease": {
+      color: theme.colors.decrease,
+    },
+    "& .label": {
+      color: "rgba(255, 255, 255, 0.5)",
+      textTransform: "uppercase",
+      fontSize: "0.7rem",
+    },
+  };
+});
 
 const isIncrease = (number) => !(number < 0);
 
@@ -26,27 +58,25 @@ const getAmountClass = (amount) => {
 const Amount = (props) => {
   const {
     amount,
-    className,
     label,
     profit,
-    prefix,
-    affix,
+    prefix = "",
+    affix = "",
     precision = 2,
+    size,
+    ...rest
   } = props;
 
   const value = precision ? round(amount, precision) : amount;
 
-  console.log(label, value, amount);
+  const valueString = `${prefix}${numberWithCommas(value)}${affix}`;
 
   return (
-    <p className={`amount bold  ${className}`}>
-      <span className={`value ${getAmountClass(profit)}`}>
-        {prefix}
-        {numberWithCommas(value)}
-        {affix}
-      </span>
+    <StyledAmount {...rest} className={classnames("amount", "bold", size)}>
+      <span className={`value ${getAmountClass(profit)}`}>{valueString}</span>
+
       {label && <span className="label">{startCase(label)} </span>}
-    </p>
+    </StyledAmount>
   );
 };
 

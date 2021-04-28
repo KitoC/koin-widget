@@ -6,7 +6,7 @@ const AmountSection = ({ amounts }) => {
       {amounts.map((amount, index) => {
         return (
           <Amount
-            className={`pos${index}`}
+            alignment={index ? "right" : "left"}
             precision={amount.precision}
             profit={amount.profit}
             label={amount.label}
