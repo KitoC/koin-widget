@@ -8,9 +8,13 @@ import {
   useHistory,
 } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
+import { login } from "../store/authentication/authenticationSlice.js";
+import Menu from "../components/Menu";
+
 import Home from "./Home";
 import Authentication from "./Authentication";
-import { login } from "../store/authentication/authenticationSlice.js";
+import Account from "./Account";
+import Setup from "./Setup";
 
 const PrivateRoute = ({ children, ...rest }) => {
   const isLoggedIn = useSelector((state) => state.authentication.isLoggedIn);
@@ -50,8 +54,8 @@ export default function Screens() {
 
     if (token) {
       dispatch(login(token));
-      setTokenChecked(true);
     }
+    setTokenChecked(true);
   }, []);
 
   if (!tokenChecked) {
@@ -59,16 +63,30 @@ export default function Screens() {
   }
 
   return (
-    <Router>
-      <Switch>
-        <PublicRoute path="/auth">
-          <Authentication />
-        </PublicRoute>
+    <>
+      <Router>
+        <Switch>
+          <PublicRoute path="/auth">
+            <Authentication />
+          </PublicRoute>
 
-        <PrivateRoute path="/">
-          <Home />
-        </PrivateRoute>
-      </Switch>
-    </Router>
+          <PrivateRoute path="/" exact>
+            <Menu>
+              <Home />
+            </Menu>
+          </PrivateRoute>
+
+          <PrivateRoute path="/setup" exact>
+            <Setup />
+          </PrivateRoute>
+
+          <PrivateRoute path="/account">
+            <Menu>
+              <Account />
+            </Menu>
+          </PrivateRoute>
+        </Switch>
+      </Router>
+    </>
   );
 }

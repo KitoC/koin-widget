@@ -4,57 +4,43 @@ import { Loader } from "rsuite";
 import styled from "styled-components";
 import api from "../_config/api";
 import OverView from "../components/OverView";
+import { useSelector, useDispatch } from "react-redux";
+import { fetchBalances } from "../store/balances/balancesSlice";
+import { fetchUserSettings } from "../store/authentication/authenticationSlice";
 
 const StyledContainer = styled.div(({ theme }) => ({
-  // ...theme.utils.flexCenter,
   display: "flex",
   justifyContent: "center",
   ...theme.utils.fitParent,
-  // padding:
 }));
 
 const HomeScreen = ({ setIsAuthorized }) => {
-  const [loading, setLoading] = useState(true);
-  const [data, setData] = useState(null);
-  const [errorMessage, setError] = useState(null);
+  const dispatch = useDispatch();
+
+  const settings = useSelector((state) => state.authentication.settings);
+  const loading = useSelector((state) => state.balances.loading);
+  const error = useSelector((state) => state.balances.error);
+  const data = useSelector((state) => state.balances.data);
+
+  useEffect(() => {
+    dispatch(fetchUserSettings());
+  }, []);
 
   useEffect(() => {
     let timeout;
 
-    const getBalances = async () => {
-      try {
-        const { data } = await api.get("/api/v1/coinspot/balances");
+    if (settings) {
+      const getBalances = async () => {
+        dispatch(fetchBalances());
 
-        setData(data.data);
-      } catch (error) {
-        const message = get(
-          error,
-          "response.data.error.message",
-          error.message
-        );
+        timeout = setTimeout(getBalances, 60000);
+      };
 
-        if (message.includes("key")) {
-          localStorage.clear();
-          setLoading(true);
-          setError(null);
-          setIsAuthorized(null);
-        }
+      getBalances();
+    }
 
-        if (!data) {
-          setError(message);
-        }
-      } finally {
-        if (loading) {
-          setLoading(false);
-        }
-      }
-
-      timeout = setTimeout(getBalances, 60000);
-    };
-
-    getBalances();
     return () => clearTimeout(timeout);
-  }, []);
+  }, [settings]);
 
   if (loading) {
     return (
@@ -64,17 +50,17 @@ const HomeScreen = ({ setIsAuthorized }) => {
     );
   }
 
-  if (errorMessage && !data) {
+  if (error && !data.length) {
     return (
       <div className="fit-parent flex-center">
-        <p>{errorMessage}</p>
+        <p>{error.message}</p>
       </div>
     );
   }
 
   return (
     <StyledContainer>
-      <OverView data={data} />
+      <OverView />
     </StyledContainer>
   );
 };

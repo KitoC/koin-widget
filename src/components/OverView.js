@@ -1,6 +1,7 @@
 import get from "lodash/get";
 import startCase from "lodash/startCase";
 import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 import { SelectPicker, Input } from "rsuite";
 import styled from "styled-components";
 import Amount from "./Amount";
@@ -59,7 +60,10 @@ const createFilterOptions = (coin) => {
   ];
 };
 
-const OverView = ({ data }) => {
+const OverView = () => {
+  const data = useSelector((state) => state.balances.data);
+  console.log({ data });
+
   const options = createFilterOptions();
   const [searchValue, setSearchValue] = useState("");
   const [filterValue, setFilterValue] = useState(options[0].value);
@@ -77,6 +81,7 @@ const OverView = ({ data }) => {
   };
 
   const sortedBalances = get(data, "balances", [])
+    .slice()
     .sort(sortBalances)
     .filter((balance) =>
       balance.short_name.toLowerCase().includes(searchValue.toLowerCase())
@@ -130,14 +135,15 @@ const OverView = ({ data }) => {
     <StyledContainer>
       <div className="overview">
         <div className="totals-container">
-          {totals.map((totalSection) => (
+          {totals.map((totalSection, index) => (
             <div
+              key={index}
               className={`totals ${
                 totalSection.length > 1 ? "flex-between" : "flex-center"
               }`}
             >
               {totalSection.map((total) => (
-                <Amount {...total} />
+                <Amount key={total.label} {...total} />
               ))}
             </div>
           ))}
@@ -169,8 +175,6 @@ const OverView = ({ data }) => {
           />
         ))}
       </div>
-
-      <Menu></Menu>
     </StyledContainer>
   );
 };

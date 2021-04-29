@@ -32,15 +32,6 @@ html {
   color: white;
 }
 
-label {
-  padding: 0 var(--spacing-m);
-  padding-bottom: var(--spacing-m);
-
-  :first-child {
-    width: 100%;
-  }
-}
-
 .rs-picker-select,
 .rs-picker-default {
   background-color: transparent !important;
@@ -118,17 +109,6 @@ a .rs-picker-toggle-value {
   width: 100%;
   height: 100%;
 
-  label {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-
-    &:first-child {
-      margin-top: var(--spacing-s);
-      width: 100%;
-    }
-  }
-
   button {
     padding: var(--spacing-s) var(--spacing-m);
     border-radius: 3px;
@@ -153,10 +133,16 @@ a .rs-picker-toggle-value {
     &:after {
       content: " ";
       background: rgba(255, 255, 255, 0.02);
+      background: linear-gradient(
+        66deg,
+        rgba(255, 255, 255, 0.02) 0%,
+        rgba(255, 255, 255, 0.08) 95%
+      );
+      box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.4);
       width: 200%;
       height: 200%;
       position: absolute;
-      top: -100%;
+      top: -105%;
       left: -50%;
       border-radius: 50%;
     }
@@ -192,15 +178,8 @@ a .rs-picker-toggle-value {
       margin-bottom: var(--spacing-m);
     }
   }
-
-  label {
-    padding: 0;
-
-    :first-child {
-      width: 100%;
-    }
-  }
 }
+
 p,
 p + p {
   margin: 0;

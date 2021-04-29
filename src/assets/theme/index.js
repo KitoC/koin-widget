@@ -47,6 +47,13 @@ export default {
   bRadius: addSizeUnit({ s: 0.5, m: 1, l: 2 }),
 
   utils: {
+    flexAuto: {
+      "-webkit-box-flex": "1",
+      "-ms-flex": "1 1 auto",
+      flex: "1 1 auto",
+      minWidth: "0",
+      minHeight: "0",
+    },
     flexColumn: {
       display: "flex",
       flexDirection: "column",

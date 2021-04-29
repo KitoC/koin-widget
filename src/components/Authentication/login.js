@@ -1,12 +1,14 @@
 import { useMemo } from "react";
 import { Link, useHistory } from "react-router-dom";
 import { Button } from "rsuite";
+import get from "lodash/get";
 import { Formik, Field, Form } from "formik";
 import { Input, FormBuilder } from "../Form";
 import styled from "styled-components";
-import api from "../../_config/api";
+import api, { endpoint } from "../../_config/api";
 import { useDispatch } from "react-redux";
 import { login } from "../../store/authentication/authenticationSlice.js";
+import getError from "../../utils/getError";
 
 const Container = styled.div(({ theme }) => ({
   ...theme.utils.flexCenter,
@@ -48,6 +50,7 @@ const validatePassword = ({ password }) => {
 };
 
 const formConfig = ({ dispatch, history }) => ({
+  title: "Sign in",
   validateOnChange: false,
   validate: (values) => {
     const errors = {};
@@ -61,12 +64,19 @@ const formConfig = ({ dispatch, history }) => ({
     try {
       actions.setSubmitting(true);
 
-      const { data } = await api.post("/api/v1/authentication/login", values);
+      const { data } = await api.post(
+        endpoint.api.v1.authentication.login,
+        values
+      );
 
       dispatch(login(data.data.token));
 
       history.push("/");
-    } catch (error) {}
+    } catch (error) {
+      const submissionError = getError(error).message;
+
+      actions.setErrors({ submissionError });
+    }
   },
   buttons: [
     {
@@ -92,7 +102,6 @@ const Login = () => {
   return (
     <Container>
       <Card shaded>
-        <h4>Sign In</h4>
         <FormBuilder formConfig={config} />
         <StyledLink to={`/auth/register`}>
           Need an account? Register now.

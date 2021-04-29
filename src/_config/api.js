@@ -1,18 +1,29 @@
 import axios from "axios";
+import store from "../store";
 
 const api = axios.create({
   baseURL: process.env.REACT_APP_BASE_URL,
 });
 
 api.interceptors.request.use(function (config) {
-  if (localStorage.getItem("credentials")) {
-    const credentials = JSON.parse(localStorage.getItem("credentials"));
+  console.log();
+  const { settings } = store.getState().authentication;
 
-    config.headers.common.key = credentials.key;
-    config.headers.common.secret = credentials.secret;
+  if (settings) {
+    const { coinspotKey, coinspotSecret } = settings;
+
+    config.headers.common.key = coinspotKey;
+    config.headers.common.secret = coinspotSecret;
+  }
+
+  if (localStorage.getItem("token")) {
+    const token = localStorage.getItem("token");
+
+    config.headers.common.Authorization = `Bearer ${token}`;
   }
 
   return config;
 });
 
+export { default as endpoint } from "./endpoints";
 export default api;

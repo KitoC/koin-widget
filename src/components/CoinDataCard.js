@@ -1,4 +1,10 @@
+import styled from "styled-components";
 import Amount from "./Amount";
+
+const StyledContainer = styled.div(({ theme }) => ({
+  background: theme.colors.card,
+  boxShadow: "3px 3px 5px rgba(0, 0, 0, 0.5)",
+}));
 
 const AmountSection = ({ amounts }) => {
   return (
@@ -6,6 +12,7 @@ const AmountSection = ({ amounts }) => {
       {amounts.map((amount, index) => {
         return (
           <Amount
+            key={amount.label}
             alignment={index ? "right" : "left"}
             precision={amount.precision}
             profit={amount.profit}
@@ -45,10 +52,10 @@ const CoinDataCard = ({ coin, displayedValues }) => {
 
   return (
     <div className="coin-data">
-      <div className="coin-data-card">
+      <StyledContainer className="coin-data-card">
         <div className="section flex p1">
           <h4 className="bold">
-            {short_name} - ${rate} (${fiat_value})
+            {short_name} - ${rate}
           </h4>
           {/* <img
             width="32px"
@@ -56,10 +63,10 @@ const CoinDataCard = ({ coin, displayedValues }) => {
           /> */}
         </div>
 
-        {amountSections.map((amountSection) => (
-          <AmountSection amounts={amountSection} />
+        {amountSections.map((amountSection, index) => (
+          <AmountSection key={index} amounts={amountSection} />
         ))}
-      </div>
+      </StyledContainer>
     </div>
   );
 };

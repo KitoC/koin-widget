@@ -1,10 +1,13 @@
 import { useMemo } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { Button } from "rsuite";
 import { Formik, Field, Form } from "formik";
-import { Input, FormBuilder } from "../Form";
 import styled from "styled-components";
-import api from "../../_config/api";
+import { useDispatch } from "react-redux";
+import { FormBuilder } from "../Form";
+import api, { endpoint } from "../../_config/api";
+import { login } from "../../store/authentication/authenticationSlice.js";
+import getError from "../../utils/getError";
 
 const Container = styled.div(({ theme }) => ({
   ...theme.utils.flexCenter,
@@ -55,7 +58,8 @@ const validatePasswordConfirm = ({ confirmPassword, password }) => {
   return undefined;
 };
 
-const formConfig = (props) => ({
+const formConfig = ({ dispatch, history }) => ({
+  title: "Create your account",
   validateOnChange: false,
   validate: (values) => {
     const errors = {};
@@ -70,7 +74,6 @@ const formConfig = (props) => ({
       }
     });
 
-    console.log({ errors });
     return errors;
   },
   onSubmit: async (values, actions) => {
@@ -78,8 +81,19 @@ const formConfig = (props) => ({
     try {
       actions.setSubmitting(true);
 
-      const res = await api.post("/api/v1/authentication/register", values);
-    } catch (error) {}
+      const { data } = await api.post(
+        endpoint.api.v1.authentication.register,
+        values
+      );
+
+      dispatch(login(data.data.token));
+
+      history.push("/setup");
+    } catch (error) {
+      const submissionError = getError(error).message;
+
+      actions.setErrors({ submissionError });
+    }
   },
   buttons: [
     {
@@ -103,14 +117,15 @@ const formConfig = (props) => ({
 });
 
 const Register = () => {
-  const config = useMemo(() => formConfig());
+  const dispatch = useDispatch();
+  const history = useHistory();
+  const config = useMemo(() => formConfig({ dispatch, history }));
 
   return (
     <Container>
       <Card shaded>
-        <h4>Create your Account</h4>
         <FormBuilder formConfig={config} />
-        <StyledLink to={`/login`}>Have an account already? Sign In.</StyledLink>
+        <StyledLink to={`/auth`}>Have an account already? Sign In.</StyledLink>
       </Card>
     </Container>
   );
