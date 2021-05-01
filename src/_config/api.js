@@ -1,12 +1,12 @@
 import axios from "axios";
 import store from "../store";
+import { logout } from "../store/authentication/authenticationSlice";
 
 const api = axios.create({
   baseURL: process.env.REACT_APP_BASE_URL,
 });
 
 api.interceptors.request.use(function (config) {
-  console.log();
   const { settings } = store.getState().authentication;
 
   if (settings) {
@@ -24,6 +24,19 @@ api.interceptors.request.use(function (config) {
 
   return config;
 });
+
+api.interceptors.response.use(
+  function (response) {
+    return response;
+  },
+  function (error) {
+    if (error.response.status === 401) {
+      store.dispatch(logout());
+    }
+
+    return Promise.reject(error);
+  }
+);
 
 export { default as endpoint } from "./endpoints";
 export default api;
