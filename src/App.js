@@ -1,5 +1,4 @@
 import "./App.scss";
-import api from "./_config/api";
 import "rsuite/dist/styles/rsuite-dark.css";
 // @import '~rsuite/lib/styles/themes/dark/index.less';
 

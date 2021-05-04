@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faCoins } from "@fortawesome/free-solid-svg-icons";
-import { NavLink, useRouteMatch } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const items = [
   { label: "Balances", icon: faCoins, to: "/" },

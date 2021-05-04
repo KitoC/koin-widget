@@ -1,17 +1,7 @@
-import { useEffect, useState } from "react";
-import {
-  Switch,
-  Route,
-  useRouteMatch,
-  useHistory,
-  Link,
-} from "react-router-dom";
-import get from "lodash/get";
-import { useSelector } from "react-redux";
+import { Switch, Route, useRouteMatch, Link } from "react-router-dom";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
-import api from "../_config/api";
 
 import Profile from "../components/Account/Profile";
 
@@ -55,7 +45,7 @@ const RouteWithBackButton = ({ children, backTo, title, ...rest }) => {
 };
 
 const AccountScreen = (props) => {
-  let { path, url } = useRouteMatch();
+  let { path } = useRouteMatch();
 
   return (
     <Switch>

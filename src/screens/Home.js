@@ -1,8 +1,6 @@
-import { useEffect, useState } from "react";
-import get from "lodash/get";
+import { useEffect } from "react";
 import { Loader } from "rsuite";
 import styled from "styled-components";
-import api from "../_config/api";
 import OverView from "../components/OverView";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchBalances } from "../store/balances/balancesSlice";
@@ -24,7 +22,7 @@ const HomeScreen = ({ setIsAuthorized }) => {
 
   useEffect(() => {
     dispatch(fetchUserSettings());
-  }, []);
+  }, [dispatch]);
 
   useEffect(() => {
     let timeout;
@@ -40,7 +38,7 @@ const HomeScreen = ({ setIsAuthorized }) => {
     }
 
     return () => clearTimeout(timeout);
-  }, [settings]);
+  }, [settings, dispatch]);
 
   if (loading) {
     return (

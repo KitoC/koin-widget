@@ -1,9 +1,6 @@
 import { useMemo } from "react";
 import { Link, useHistory } from "react-router-dom";
-import { Button } from "rsuite";
-import get from "lodash/get";
-import { Formik, Field, Form } from "formik";
-import { Input, FormBuilder } from "../Form";
+import { FormBuilder } from "../Form";
 import styled from "styled-components";
 import api, { endpoint } from "../../_config/api";
 import { useDispatch } from "react-redux";
@@ -97,7 +94,10 @@ const formConfig = ({ dispatch, history }) => ({
 const Login = () => {
   const dispatch = useDispatch();
   const history = useHistory();
-  const config = useMemo(() => formConfig({ dispatch, history }), []);
+  const config = useMemo(() => formConfig({ dispatch, history }), [
+    dispatch,
+    history,
+  ]);
 
   return (
     <Container>

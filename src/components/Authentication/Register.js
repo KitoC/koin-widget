@@ -1,7 +1,5 @@
 import { useMemo } from "react";
 import { Link, useHistory } from "react-router-dom";
-import { Button } from "rsuite";
-import { Formik, Field, Form } from "formik";
 import styled from "styled-components";
 import { useDispatch } from "react-redux";
 import { FormBuilder } from "../Form";
@@ -77,7 +75,6 @@ const formConfig = ({ dispatch, history }) => ({
     return errors;
   },
   onSubmit: async (values, actions) => {
-    console.log({ actions });
     try {
       actions.setSubmitting(true);
 
@@ -119,7 +116,10 @@ const formConfig = ({ dispatch, history }) => ({
 const Register = () => {
   const dispatch = useDispatch();
   const history = useHistory();
-  const config = useMemo(() => formConfig({ dispatch, history }));
+  const config = useMemo(() => formConfig({ dispatch, history }), [
+    dispatch,
+    history,
+  ]);
 
   return (
     <Container>

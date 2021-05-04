@@ -1,20 +1,12 @@
-import { useEffect, useState } from "react";
-import {
-  Switch,
-  Route,
-  useRouteMatch,
-  useHistory,
-  Link,
-} from "react-router-dom";
-import get from "lodash/get";
-import { useSelector, useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
 import styled from "styled-components";
 
 import { logout as logoutAction } from "../../store/authentication/authenticationSlice.js";
 
-const Header = styled.h4(({ theme }) => ({
-  padding: `${theme.spacings.m} 0`,
-}));
+// const Header = styled.h4(({ theme }) => ({
+//   padding: `${theme.spacings.m} 0`,
+// }));
 
 const ProfileContainer = styled.div(({ theme }) => ({
   ...theme.utils.flexColumn,

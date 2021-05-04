@@ -3,9 +3,7 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link,
   Redirect,
-  useHistory,
 } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { login } from "../store/authentication/authenticationSlice";
@@ -56,7 +54,7 @@ export default function Screens() {
       dispatch(login(token));
     }
     setTokenChecked(true);
-  }, []);
+  }, [dispatch]);
 
   if (!tokenChecked) {
     return null;

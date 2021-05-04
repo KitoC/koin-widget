@@ -1,12 +1,11 @@
 import get from "lodash/get";
 import startCase from "lodash/startCase";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useSelector } from "react-redux";
 import { SelectPicker, Input } from "rsuite";
 import styled from "styled-components";
 import Amount from "./Amount";
 import CoinDataCard from "./CoinDataCard";
-import Menu from "./Menu";
 
 const StyledContainer = styled.div(({ theme }) => ({
   maxWidth: "1024px",
@@ -50,14 +49,14 @@ const createFilterOptions = (coin) => {
     .map(({ label }) => createOptions(label))
     .flat();
 
-  return [
-    ...createOptions("aud_balance"),
-    ...createOptions("profit"),
-    ...createOptions("balance"),
-    ...createOptions("aud_spent"),
-    ...createOptions("rate"),
-    ...createOptions("difference"),
-  ];
+  // return [
+  //   ...createOptions("aud_balance"),
+  //   ...createOptions("profit"),
+  //   ...createOptions("balance"),
+  //   ...createOptions("aud_spent"),
+  //   ...createOptions("rate"),
+  //   ...createOptions("difference"),
+  // ];
 };
 
 const OverView = () => {

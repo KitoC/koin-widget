@@ -1,16 +1,11 @@
 import { useMemo } from "react";
 import { useHistory } from "react-router-dom";
-import get from "lodash/get";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import styled from "styled-components";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 import { updateUserSettings } from "../store/authentication/authenticationSlice";
 import { FormBuilder } from "../components/Form";
 import { Card, Text, MessageBox } from "../components/UI";
 import getError from "../utils/getError";
-
-import Profile from "../components/Account/Profile";
 
 const AccountScreenContainer = styled.div(({ theme }) => ({
   ...theme.utils.flexCenter,
@@ -84,7 +79,10 @@ const formConfig = ({ dispatch, history }) => ({
 const SetupScreen = (props) => {
   const dispatch = useDispatch();
   const history = useHistory();
-  const config = useMemo(() => formConfig({ dispatch, history }));
+  const config = useMemo(() => formConfig({ dispatch, history }), [
+    dispatch,
+    history,
+  ]);
 
   return (
     <AccountScreenContainer>

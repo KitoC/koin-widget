@@ -39,7 +39,7 @@ export const authenticationSlice = createSlice({
   },
 });
 
-export const {} = authenticationSlice.actions;
+// export const {} = authenticationSlice.actions;
 export { fetchBalances };
 
 export default authenticationSlice.reducer;

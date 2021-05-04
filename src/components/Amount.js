@@ -4,7 +4,7 @@ import styled from "styled-components";
 import classnames from "classnames";
 
 const StyledAmount = styled.p(({ theme, ...props }) => {
-  const { rightAlign, alignment = "center" } = props;
+  const { alignment = "center" } = props;
 
   let alignments = { center: "center", left: "flex-start", right: "flex-end" };
 

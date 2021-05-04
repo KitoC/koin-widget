@@ -10,7 +10,7 @@ const addSizeUnit = (obj) => {
   return withSizeUnit;
 };
 
-export default {
+const theme = {
   //   --spacing-xs: 0.33rem;
   // --spacing-s: 0.5rem;
   // --spacing-m: 1rem;
@@ -40,7 +40,7 @@ export default {
     increase: "rgb(25, 248, 107)",
     decrease: "rgb(255, 63, 4)",
     card: "rgba(255, 255, 255, 0.05)",
-    card: "rgba(255, 255, 255, 0.05)",
+    // card: "rgba(255, 255, 255, 0.05)",
     themeBG: "rgba(255, 255, 255, 0.05)",
   },
   spacings: addSizeUnit({ xs: 0.33, s: 0.5, m: 1, l: 1.5, xl: 2.5 }),
@@ -69,3 +69,5 @@ export default {
     },
   },
 };
+
+export default theme;

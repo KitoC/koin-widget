@@ -29,17 +29,17 @@ const AmountSection = ({ amounts }) => {
 
 const CoinDataCard = ({ coin, displayedValues }) => {
   const {
-    profit,
-    percentage_difference,
+    // profit,
+    // percentage_difference,
     short_name,
     // aud_balance,
-    balance,
+    // balance,
     rate,
     // total_aud_spent,
     // total_buy_order_amount,
     // total_sell_order_amount,
     unrealized_profit,
-    fiat_value,
+    // fiat_value,
   } = coin;
 
   const amountSections = displayedValues.map((section) =>
