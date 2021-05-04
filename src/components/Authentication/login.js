@@ -97,7 +97,7 @@ const formConfig = ({ dispatch, history }) => ({
 const Login = () => {
   const dispatch = useDispatch();
   const history = useHistory();
-  const config = useMemo(() => formConfig({ dispatch, history }));
+  const config = useMemo(() => formConfig({ dispatch, history }), []);
 
   return (
     <Container>

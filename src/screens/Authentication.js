@@ -4,7 +4,7 @@ import get from "lodash/get";
 import { useSelector } from "react-redux";
 
 import api from "../_config/api";
-import Login from "../components/Authentication/Login";
+import Login from "../components/Authentication/login";
 import Register from "../components/Authentication/Register";
 
 const AuthenticationScreen = (props) => {

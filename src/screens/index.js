@@ -8,7 +8,7 @@ import {
   useHistory,
 } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { login } from "../store/authentication/authenticationSlice.js";
+import { login } from "../store/authentication/authenticationSlice";
 import Menu from "../components/Menu";
 
 import Home from "./Home";
