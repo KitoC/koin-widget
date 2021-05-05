@@ -13,10 +13,15 @@ const initStore = () => {
       balances: balancesReducer,
     },
     middleware: (getDefaultMiddleware) => {
-      const middlewares = getDefaultMiddleware();
+      let middlewares = getDefaultMiddleware();
 
-      console.log({ middlewares }, getDefaultMiddleware());
-      middlewares[1] = middlewares[1].withExtraArgument({ api });
+      middlewares = middlewares.map((middleware) => {
+        if (middleware.withExtraArgument) {
+          return middleware.withExtraArgument({ api });
+        }
+
+        return middleware;
+      });
 
       return middlewares;
     },
