@@ -2,10 +2,10 @@ import { useMemo } from "react";
 import { Link, useHistory } from "react-router-dom";
 import styled from "styled-components";
 import { useDispatch } from "react-redux";
+import { unwrapResult } from "@reduxjs/toolkit";
 import { FormBuilder } from "../Form";
-import api, { endpoint } from "../../_config/api";
-import { login } from "../../store/authentication/authenticationSlice.js";
 import getError from "../../utils/getError";
+import { register } from "../../store/authentication/authenticationSlice";
 
 const Container = styled.div(({ theme }) => ({
   ...theme.utils.flexCenter,
@@ -74,23 +74,20 @@ const formConfig = ({ dispatch, history }) => ({
 
     return errors;
   },
-  onSubmit: async (values, actions) => {
-    try {
-      actions.setSubmitting(true);
+  onSubmit: (values, actions) => {
+    actions.setSubmitting(true);
 
-      const { data } = await api.post(
-        endpoint.api.v1.authentication.register,
-        values
-      );
+    dispatch(register(values))
+      .then(unwrapResult)
+      .then(() => {
+        history.push("/setup");
+      })
+      .catch((error) => {
+        const submissionError = getError(error).message;
 
-      dispatch(login(data.data.token));
-
-      history.push("/setup");
-    } catch (error) {
-      const submissionError = getError(error).message;
-
-      actions.setErrors({ submissionError });
-    }
+        actions.setErrors({ submissionError });
+        actions.setSubmitting(false);
+      });
   },
   buttons: [
     {

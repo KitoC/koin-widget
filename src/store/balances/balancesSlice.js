@@ -4,7 +4,7 @@ import getError from "../../utils/getError";
 
 const fetchBalances = createAsyncThunk(
   "balances/fetchBalances",
-  async (userId, { rejectWithValue }) => {
+  async (userId, { rejectWithValue, extra: { api } }) => {
     try {
       const { data } = await api.get("/api/v1/coinspot/balances");
 

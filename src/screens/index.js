@@ -6,8 +6,9 @@ import {
   Redirect,
 } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { login } from "../store/authentication/authenticationSlice";
+import { setToken } from "../store/authentication/authenticationSlice";
 import Menu from "../components/Menu";
+import history from "../utils/history";
 
 import Home from "./Home";
 import Authentication from "./Authentication";
@@ -51,7 +52,7 @@ export default function Screens() {
     const token = localStorage.getItem("token");
 
     if (token) {
-      dispatch(login(token));
+      dispatch(setToken(token));
     }
     setTokenChecked(true);
   }, [dispatch]);
@@ -62,7 +63,7 @@ export default function Screens() {
 
   return (
     <>
-      <Router>
+      <Router history={history}>
         <Switch>
           <PublicRoute path="/auth">
             <Authentication />

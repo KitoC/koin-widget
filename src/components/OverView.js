@@ -61,7 +61,6 @@ const createFilterOptions = (coin) => {
 
 const OverView = () => {
   const data = useSelector((state) => state.balances.data);
-  console.log({ data });
 
   const options = createFilterOptions();
   const [searchValue, setSearchValue] = useState("");

@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { Loader } from "rsuite";
+import get from "lodash/get";
 import styled from "styled-components";
 import OverView from "../components/OverView";
 import { useSelector, useDispatch } from "react-redux";
@@ -48,7 +49,7 @@ const HomeScreen = ({ setIsAuthorized }) => {
     );
   }
 
-  if (error && !data.length) {
+  if (error && !data) {
     return (
       <div className="fit-parent flex-center">
         <p>{error.message}</p>

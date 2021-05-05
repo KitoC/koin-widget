@@ -3,10 +3,12 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import store from "./store";
+import initStore from "./store";
 import { Provider } from "react-redux";
 import { ThemeProvider } from "styled-components";
 import theme from "./assets/theme";
+
+const store = initStore();
 
 ReactDOM.render(
   <React.StrictMode>
