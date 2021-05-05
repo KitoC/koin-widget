@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { Switch, Route, useRouteMatch, useHistory } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 
-import Login from "../components/Authentication/Login";
+import Login from "../components/Authentication/login";
 import Register from "../components/Authentication/Register";
 import { logout } from "../store/authentication/authenticationSlice.js";
 
