@@ -15,6 +15,7 @@ const initStore = () => {
     middleware: (getDefaultMiddleware) => {
       const middlewares = getDefaultMiddleware();
 
+      console.log({ middlewares }, getDefaultMiddleware());
       middlewares[1] = middlewares[1].withExtraArgument({ api });
 
       return middlewares;
