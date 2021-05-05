@@ -4,7 +4,6 @@ import styled from "styled-components";
 import { useDispatch } from "react-redux";
 import { unwrapResult } from "@reduxjs/toolkit";
 import { FormBuilder } from "../Form";
-import api, { endpoint } from "../../_config/api";
 import { login } from "../../store/authentication/authenticationSlice.js";
 import getError from "../../utils/getError";
 

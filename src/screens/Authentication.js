@@ -25,10 +25,9 @@ const Logout = () => {
 };
 
 const AuthenticationScreen = (props) => {
-  let { path, ...rest } = useRouteMatch();
+  let { path } = useRouteMatch();
 
   const history = useHistory();
-  const location = useLocation();
   const isLoggedIn = useSelector((state) => state.authentication.isLoggedIn);
 
   useEffect(() => {

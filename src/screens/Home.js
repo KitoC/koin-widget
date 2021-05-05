@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import { Loader } from "rsuite";
-import get from "lodash/get";
 import styled from "styled-components";
 import OverView from "../components/OverView";
 import { useSelector, useDispatch } from "react-redux";

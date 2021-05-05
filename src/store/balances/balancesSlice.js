@@ -1,5 +1,4 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import api from "../../_config/api";
 import getError from "../../utils/getError";
 
 const fetchBalances = createAsyncThunk(
