@@ -1,4 +1,5 @@
 import axios from "axios";
+import get from "lodash/get";
 import history from "../utils/history";
 
 const createApi = (getState) => {
@@ -39,7 +40,7 @@ const createApi = (getState) => {
         history.push("/auth/logout", { state: "foo" });
       }
 
-      return Promise.reject(error);
+      return Promise.reject(get(error, "response.data.error", error));
     }
   );
 
