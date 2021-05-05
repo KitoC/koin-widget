@@ -7,7 +7,9 @@ const createApi = (getState) => {
   });
 
   api.interceptors.request.use(function (config) {
-    const { settings } = getState().authentication;
+    const { authentication, userSettings } = getState();
+    const { data: settings } = userSettings;
+    const { token } = authentication;
 
     if (settings) {
       const { coinspotKey, coinspotSecret } = settings;
@@ -16,9 +18,7 @@ const createApi = (getState) => {
       config.headers.common.secret = coinspotSecret;
     }
 
-    if (localStorage.getItem("token")) {
-      const token = localStorage.getItem("token");
-
+    if (token) {
       config.headers.common.Authorization = `Bearer ${token}`;
     }
 
@@ -30,12 +30,8 @@ const createApi = (getState) => {
       return response;
     },
     function (error) {
-      console.log(
-        (error.response.status === 401 ||
-          error.response.data.error.message === "No Internal Key") &&
-          !document.location.pathname.includes("auth")
-      );
       if (
+        error.response &&
         (error.response.status === 401 ||
           error.response.data.error.message === "No Internal Key") &&
         !document.location.pathname.includes("auth")

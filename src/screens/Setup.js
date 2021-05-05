@@ -1,8 +1,9 @@
 import { useMemo } from "react";
 import { useHistory } from "react-router-dom";
 import { useDispatch } from "react-redux";
+import { unwrapResult } from "@reduxjs/toolkit";
 import styled from "styled-components";
-import { updateUserSettings } from "../store/authentication/authenticationSlice";
+import { updateUserSettings } from "../store/userSettings/userSettingsSlice";
 import { FormBuilder } from "../components/Form";
 import { Card, Text, MessageBox } from "../components/UI";
 import getError from "../utils/getError";
@@ -14,18 +15,20 @@ const AccountScreenContainer = styled.div(({ theme }) => ({
 
 const formConfig = ({ dispatch, history }) => ({
   title: "Account setup",
-  onSubmit: async (values, actions) => {
-    try {
-      actions.setSubmitting(true);
+  onSubmit: (values, actions) => {
+    actions.setSubmitting(true);
 
-      await dispatch(updateUserSettings(values));
+    dispatch(updateUserSettings(values))
+      .then(unwrapResult)
+      .then(() => {
+        history.push("/");
+      })
+      .catch((error) => {
+        const submissionError = getError(error).message;
 
-      history.push("/");
-    } catch (error) {
-      const submissionError = getError(error).message;
-
-      actions.setErrors({ submissionError });
-    }
+        actions.setErrors({ submissionError });
+        actions.setSubmitting(false);
+      });
   },
   buttons: [
     {

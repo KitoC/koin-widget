@@ -1,6 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
 import authenticationReducer from "./authentication/authenticationSlice";
 import balancesReducer from "./balances/balancesSlice";
+import userSettingsReducer from "./userSettings/userSettingsSlice";
 import createApi from "../_config/api";
 
 const initStore = () => {
@@ -11,6 +12,7 @@ const initStore = () => {
     reducer: {
       authentication: authenticationReducer,
       balances: balancesReducer,
+      userSettings: userSettingsReducer,
     },
     middleware: (getDefaultMiddleware) => {
       let middlewares = getDefaultMiddleware();

@@ -84,7 +84,6 @@ const formConfig = ({ dispatch, history }) => ({
       })
       .catch((error) => {
         const submissionError = getError(error).message;
-
         actions.setErrors({ submissionError });
         actions.setSubmitting(false);
       });

@@ -1,10 +1,11 @@
 import { useEffect } from "react";
 import { Loader } from "rsuite";
+import { useHistory } from "react-router-dom";
 import styled from "styled-components";
 import OverView from "../components/OverView";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchBalances } from "../store/balances/balancesSlice";
-import { fetchUserSettings } from "../store/authentication/authenticationSlice";
+import { fetchUserSettings } from "../store/userSettings/userSettingsSlice";
 
 const StyledContainer = styled.div(({ theme }) => ({
   display: "flex",
@@ -14,20 +15,34 @@ const StyledContainer = styled.div(({ theme }) => ({
 
 const HomeScreen = ({ setIsAuthorized }) => {
   const dispatch = useDispatch();
+  const history = useHistory();
 
-  const settings = useSelector((state) => state.authentication.settings);
-  const loading = useSelector((state) => state.balances.loading);
+  const settings = useSelector((state) => state.userSettings.data);
+  const loadingSettings = useSelector((state) => state.userSettings.loading);
+  const token = useSelector((state) => state.authentication.token);
+  const loadingBalances = useSelector((state) => state.balances.loading);
   const error = useSelector((state) => state.balances.error);
-  const data = useSelector((state) => state.balances.data);
+  const balances = useSelector((state) => state.balances.data);
+
+  const hasRequiredSettings =
+    settings && settings.coinspotKey && settings.coinspotSecret;
 
   useEffect(() => {
-    dispatch(fetchUserSettings());
-  }, [dispatch]);
+    if (token) {
+      dispatch(fetchUserSettings());
+    }
+  }, [dispatch, token]);
+
+  useEffect(() => {
+    if (!loadingSettings && !hasRequiredSettings) {
+      history.push("/setup");
+    }
+  }, [settings, history, hasRequiredSettings, loadingSettings]);
 
   useEffect(() => {
     let timeout;
 
-    if (settings) {
+    if (!loadingSettings && hasRequiredSettings) {
       const getBalances = async () => {
         dispatch(fetchBalances());
 
@@ -38,9 +53,9 @@ const HomeScreen = ({ setIsAuthorized }) => {
     }
 
     return () => clearTimeout(timeout);
-  }, [settings, dispatch]);
+  }, [settings, dispatch, hasRequiredSettings, loadingSettings]);
 
-  if (loading) {
+  if (loadingBalances && loadingSettings) {
     return (
       <div className="fit-parent flex-center">
         <Loader size="md" />
@@ -48,7 +63,7 @@ const HomeScreen = ({ setIsAuthorized }) => {
     );
   }
 
-  if (error && !data) {
+  if (error && !balances) {
     return (
       <div className="fit-parent flex-center">
         <p>{error.message}</p>

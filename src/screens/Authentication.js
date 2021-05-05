@@ -2,8 +2,8 @@ import { useEffect } from "react";
 import { Switch, Route, useRouteMatch, useHistory } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 
-import Login from "../components/Authentication/login";
-import Register from "../components/Authentication/Register";
+import LoginForm from "../components/Authentication/LoginForm";
+import RegisterForm from "../components/Authentication/RegisterForm";
 import { logout } from "../store/authentication/authenticationSlice.js";
 
 const Logout = () => {
@@ -37,11 +37,11 @@ const AuthenticationScreen = (props) => {
       </Route>
 
       <Route exact path={path}>
-        <Login />
+        <LoginForm />
       </Route>
 
       <Route path={`${path}/register`}>
-        <Register />
+        <RegisterForm />
       </Route>
     </Switch>
   );
