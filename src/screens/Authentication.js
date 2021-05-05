@@ -1,11 +1,5 @@
 import { useEffect } from "react";
-import {
-  Switch,
-  Route,
-  useRouteMatch,
-  useHistory,
-  useLocation,
-} from "react-router-dom";
+import { Switch, Route, useRouteMatch, useHistory } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 
 import Login from "../components/Authentication/Login";
